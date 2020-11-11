@@ -1,0 +1,232 @@
+{
+    "title": "Alex's Notes",
+    "author": "Alex",
+    "description": "live and learn",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "styles": {
+        "website": "./resources/styles/website.css"
+    },
+    "structure": {
+        "readme": "INTRODUCTION.md"
+    },
+    "links": {
+        "sidebar": {
+            "我的博客": "https://drling.xin/",
+            "GitHub": "https://github.com/pudongping"
+        }
+    },
+    "plugins": [
+        "-highlight",
+        "-lunr",
+        "-search",
+        "search-pro",
+        "-sharing",
+        "sharing-plus",
+        "fontsettings",
+        "livereload",
+        "expandable-chapters-small",
+        "chapter-fold",
+        "splitter",
+        "hide-element",
+        "back-to-top-button",
+        "favicon",
+        "insert-logo",
+        "pageview-count",
+        "code",
+        "prism",
+        "lightbox",
+        "github",
+        "github-buttons",
+        "donate",
+        "anchor-navigation-ex",
+        "meta",
+        "-mygitalk",
+        "change_girls",
+        "simple-mind-map",
+        "image-captions",
+        "todo",
+        "-edit-link-plus",
+        "sitemap-general",
+        "rss",
+        "icp",
+        "theme-comscore",
+        "page-copyright"
+    ],
+    "pluginsConfig": {
+        "sharing": {
+            "douban": true,
+            "facebook": false,
+            "google": true,
+            "hatenaBookmark": false,
+            "instapaper": false,
+            "line": false,
+            "linkedin": false,
+            "messenger": false,
+            "pocket": false,
+            "qq": true,
+            "qzone": true,
+            "stumbleupon": false,
+            "twitter": false,
+            "viber": false,
+            "vk": false,
+            "weibo": true,
+            "whatsapp": false,
+            "all": [
+                "douban",
+                "facebook",
+                "google",
+                "hatenaBookmark",
+                "instapaper",
+                "line",
+                "linkedin",
+                "messenger",
+                "pocket",
+                "qq",
+                "qzone",
+                "stumbleupon",
+                "twitter",
+                "viber",
+                "vk",
+                "weibo",
+                "whatsapp"
+            ]
+        },
+        "hide-element": {
+            "elements": [
+                "a.gitbook-link[href='https://www.gitbook.com']"
+            ]
+        },
+        "favicon": {
+            "shortcut": "./resources/images/favicon.ico",
+            "bookmark": "./resources/images/favicon.ico",
+            "appleTouch": "./resources/images/favicon.png",
+            "appleTouchMore": {
+                "120x120": "./resources/images/apple-touch-icon-120x120.png",
+                "180x180": "./resources/images/apple-touch-icon-180x180.png"
+            }
+        },
+        "insert-logo": {
+            "url": "/resources/images/favicon.png",
+            "style": "background: none; max-height: 30px; min-height: 30px"
+        },
+        "prism": {
+            "css": [
+                "prismjs/themes/prism-solarizedlight.css"
+            ],
+            "lang": {
+                "shell": "bash"
+            }
+        },
+        "lightbox": {
+            "sameUuid": true
+        },
+        "github": {
+            "url": "https://github.com/pudongping"
+        },
+        "github-buttons": {
+            "buttons": [
+                {
+                    "user": "pudongping",
+                    "repo": "glory",
+                    "type": "star",
+                    "count": true,
+                    "size": "small"
+                }
+            ]
+        },
+        "donate": {
+            "alipay": "/resources/images/donate.png",
+            "title": "\"若有共鸣，留言足矣，若有赞赏，何以复加？\"",
+            "button": "赞赏",
+            "alipayText": "微信/支付宝/QQ"
+        },
+        "anchor-navigation-ex": {
+            "showLevel": false,
+            "showGoTop": false
+        },
+        "meta": {
+            "data": [
+                {
+                    "name": "referrer",
+                    "content": "never"
+                }
+            ]
+        },
+        "mygitalk": {
+            "clientID": "",
+            "clientSecret": "",
+            "repo": "",
+            "owner": "",
+            "admin": [
+                ""
+            ],
+            "distractionFreeMode": false
+        },
+        "change_girls": {
+            "time": 10,
+            "urls": [
+                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605033629072&di=320b0ac6bc929e746a17eb0d03e3548e&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fc%2F574420055d0b9.jpg",
+                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605033462889&di=d0aad2c6385f42e75ba3b87a675a2605&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F0%2F58637eafc3386.jpg",
+                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605033462890&di=b1902b09da5443df217191c4c3d03ccd&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fc%2F597021760b630.jpg",
+                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605033462894&di=f8ba5bcca83ccc6fb686d336075d3fa6&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fb%2F57357af40928a.jpg",
+                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605032839109&di=947b3f5ffdbe4cc72e0f93d2e6a30e08&imgtype=0&src=http%3A%2F%2Fdik.img.kttpdq.com%2Fpic%2F40%2F27947%2F89a448f7077194f1.jpg",
+                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605033246957&di=d6170f1a9f0466f270ad1baee847eab9&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fe%2F55f26f55e9138.jpg",
+                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605033334002&di=4ef73db6c98fb737f5a3068670160056&imgtype=0&src=http%3A%2F%2Fww3.sinaimg.cn%2Flarge%2Fd2e27164gw1fbmwbgf0mij21hc0u0487.jpg"
+            ]
+        },
+        "simple-mind-map": {
+            "type": "markdown",
+            "preset": "colorful",
+            "linkShape": "diagonal",
+            "autoFit": true
+        },
+        "image-captions": {
+            "caption": "_PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_ - sugaryesp 的笔记"
+        },
+        "edit-link-plus": {
+            "base": {
+            },
+            "defaultBase": "",
+            "label": "编辑本页"
+        },
+        "sitemap-general": {
+            "prefix": "http://notes.drling.xin/"
+        },
+        "rss": {
+            "title": "sugaryesp 的笔记",
+            "description": "削个椰子皮_给个梨的笔记",
+            "author": "Alex",
+            "site_url": "http://notes.drling.xin",
+            "feed_url": "http://notes.drling.xin/rss",
+            "managingEditor": "276558492@qq.com (Alex Pu)",
+            "webMaster": "276558492@qq.com (Alex Pu)",
+            "categories": [
+                "markdown",
+                "git",
+                "gitee",
+                "github",
+                "php",
+                "python",
+                "vue.js"
+            ]
+        },
+        "icp": {
+            "number": "鄂ICP备18004705号",
+            "link": "https://beian.miit.gov.cn/"
+        },
+        "page-copyright": {
+            "description": "modified at:",
+            "signature": "Alex",
+            "wisdom": "Artisan, Backend Developer & overall web enthusiast",
+            "format": "YYYY-MM-dd hh:mm:ss",
+            "copyright": "Copyright &#169; Alex",
+            "timeColor": "#666",
+            "copyrightColor": "#666",
+            "utcOffset": "8",
+            "style": "normal",
+            "noPowered": true,
+            "baseUri": "http://notes.drling.xin/"
+        }
+    }
+}

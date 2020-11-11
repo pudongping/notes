@@ -1,0 +1,4 @@
+/* 左侧主章节名称不转换成大写 */
+.book-summary ul.summary li.header {
+    text-transform: none;
+}
