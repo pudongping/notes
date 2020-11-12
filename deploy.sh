@@ -3,7 +3,7 @@
 
 # 定义 github 仓库地址，和存放静态页面的分支，使用前请修改这两个变量的值
 my_repo='git@github.com:pudongping/glory.git'
-my_branch='static-pages'
+my_branch='gh-pages'
 
 # 定义该变量为只读
 readonly my_repo
@@ -59,7 +59,7 @@ git add -A
 orangered "execute command  ===> git commit -m 'deploy' && git checkout -b ${my_branch}"
 git commit -m 'deploy' && git checkout -b $my_branch
 
-# 发布到远程仓库 static-pages 分支
+# 发布到远程仓库 gh-pages 分支，因为这里都是使用 gitbook 编译后的文件，因此可以直接通过 -f 参数覆盖掉远程分支，文件要是丢失了的话，多编译几次，再多强制推送
 orangered "execute command  ===> git push -f -u origin ${my_branch}"
 git push -f -u origin $my_branch
 

@@ -12,8 +12,8 @@
     },
     "links": {
         "sidebar": {
-            "我的博客": "https://drling.xin/",
-            "GitHub": "https://github.com/pudongping"
+            "My Blog": "https://drling.xin/",
+            "My GitHub": "https://github.com/pudongping"
         }
     },
     "plugins": [
@@ -46,7 +46,7 @@
         "simple-mind-map",
         "image-captions",
         "todo",
-        "-edit-link-plus",
+        "edit-link-plus",
         "sitemap-general",
         "rss",
         "icp",
@@ -156,12 +156,12 @@
             ]
         },
         "mygitalk": {
-            "clientID": "",
-            "clientSecret": "",
-            "repo": "",
-            "owner": "",
+            "clientID": "1c8aa4ea706a35be21f5",
+            "clientSecret": "1fdfdb3192d912408bac4729ef10d23971cc37c8",
+            "repo": "glory",
+            "owner": "pudongping",
             "admin": [
-                ""
+                "pudongping"
             ],
             "distractionFreeMode": false
         },
@@ -188,8 +188,10 @@
         },
         "edit-link-plus": {
             "base": {
+                "pudongping.github.io/glory":"https://github.com/pudongping/glory/edit/main",
+                "pudongping.gitee.io/glory":"https://gitee.com/pudongping/glory/edit/main"
             },
-            "defaultBase": "",
+            "defaultBase": "https://github.com/pudongping/glory/edit/main",
             "label": "编辑本页"
         },
         "sitemap-general": {
