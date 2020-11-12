@@ -5,7 +5,7 @@
     "language": "zh-hans",
     "gitbook": "3.2.3",
     "styles": {
-        "website": "resources/styles/website.css"
+        "website": "./resources/styles/website.css"
     },
     "structure": {
         "readme": "INTRODUCTION.md"
@@ -98,16 +98,16 @@
             ]
         },
         "favicon": {
-            "shortcut": "resources/images/favicon.ico",
-            "bookmark": "resources/images/favicon.ico",
-            "appleTouch": "resources/images/favicon.png",
+            "shortcut": "./resources/images/favicon.ico",
+            "bookmark": "./resources/images/favicon.ico",
+            "appleTouch": "./resources/images/favicon.png",
             "appleTouchMore": {
-                "120x120": "resources/images/apple-touch-icon-120x120.png",
-                "180x180": "resources/images/apple-touch-icon-180x180.png"
+                "120x120": "./resources/images/apple-touch-icon-120x120.png",
+                "180x180": "./resources/images/apple-touch-icon-180x180.png"
             }
         },
         "insert-logo": {
-            "url": "resources/images/favicon.png",
+            "url": "/resources/images/favicon.png",
             "style": "background: none; max-height: 30px; min-height: 30px"
         },
         "prism": {
