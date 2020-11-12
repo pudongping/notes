@@ -188,8 +188,8 @@
         },
         "edit-link-plus": {
             "base": {
-                "pudongping.github.io/glory":"https://github.com/pudongping/glory/edit/main",
-                "pudongping.gitee.io/glory":"https://gitee.com/pudongping/glory/edit/main"
+                "pudongping.github.io": "https://github.com/pudongping/glory/edit/main",
+                "pudongping.gitee.io": "https://gitee.com/pudongping/glory/edit/main"
             },
             "defaultBase": "https://github.com/pudongping/glory/edit/main",
             "label": "编辑本页"

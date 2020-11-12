@@ -189,8 +189,8 @@
         },
         "edit-link-plus": {
             "base": {
-                "edit-link-name-1": "edit-link-1",
-                "edit-link-name-2": "edit-link-2"
+                "location.hostname-1": "edit-link-1",
+                "location.hostname-2": "edit-link-2"
             },
             "defaultBase": "",  // 这里填写链接地址
             "label": "编辑本页"
