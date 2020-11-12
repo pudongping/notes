@@ -136,8 +136,8 @@
             ]
         },
         "donate": {
-            "wechat": "resources/images/wechat.png",
-            "alipay": "resources/images/alipay.png",
+            "wechat": "/resources/images/wechat.png",
+            "alipay": "/resources/images/alipay.png",
             "title": "\"若有共鸣，留言足矣，若有赞赏，何以复加？\"",
             "button": "赞赏",
             "wechatText": "微信",
