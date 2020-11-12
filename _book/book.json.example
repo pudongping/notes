@@ -1,22 +1,29 @@
 {
-    "title": "Alex's Notes",
-    "author": "Alex",
-    "description": "live and learn",
-    "language": "zh-hans",
-    "gitbook": "3.2.3",
-    "styles": {
-        "website": "./resources/styles/website.css"
+    "title": "Alex's Notes",  // 设置书本的标题
+    "author": "Alex",  // 作者的相关信息
+    "description": "live and learn",  // 本书的简单描述
+    "language": "zh-hans",  // 可使用的语言：en, ar, bn, cs, de, en, es, fa, fi, fr, he, it, ja, ko, no, pl, pt, ro, ru, sv, uk, vi, zh-hans, zh-tw 这里我选择的是简体中文 zh-hans
+    "gitbook": "3.2.3",  // 指定使用的 gitbook 版本
+    "styles": {  // 自定义页面样式
+        "website": "./resources/styles/website.css",  // 当此时的 gitbook 输出为站点模式时使用的 css 样式
+        // "ebook": "styles/ebook.css",  // 当此时的 gitbook 输出为 ebook 时使用的 css 样式
+        // "pdf": "styles/pdf.css",  // 当此时的 gitbook 输出为 pdf 时使用的 css 样式
+        // "mobi": "styles/mobi.css",
+        // "epub": "styles/epub.css"        
     },
-    "structure": {
-        "readme": "INTRODUCTION.md"
+    "structure": {  // 指定 Readme、Summary、Glossary 和 Languages 对应的文件名
+        "readme": "README.md",  // 该书的介绍 （默认会创建）
+        "summary": "SUMMARY.md",  // 该书的章节结构 （默认会创建）
+        // "glossary": "GLOSSARY.md",  // 多语言书籍
+        // "languages": "LANGS.md",  // 术语描述的清单
     },
-    "links": {
+    "links": {  // 在左侧导航栏添加链接信息
         "sidebar": {
             "我的博客": "https://drling.xin/",
             "GitHub": "https://github.com/pudongping"
         }
     },
-    "plugins": [
+    "plugins": [  // 需要使用的插件列表，注释插件的时候直接在插件名称前加 “横杠 -”，比如注释 “highlight” 插件为 “-highlight”
         "-highlight",
         "-lunr",
         "-search",
@@ -41,12 +48,12 @@
         "donate",
         "anchor-navigation-ex",
         "meta",
-        "-mygitalk",
+        "mygitalk",
         "change_girls",
         "simple-mind-map",
         "image-captions",
         "todo",
-        "-edit-link-plus",
+        "edit-link-plus",
         "sitemap-general",
         "rss",
         "icp",
@@ -119,12 +126,12 @@
             }
         },
         "lightbox": {
-            "sameUuid": true
+            "sameUuid": true  // 开启了这个属性之后支持在弹层，左右切换图片
         },
         "github": {
-            "url": "https://github.com/pudongping"
+            "url": "https://github.com/pudongping"  // 在右上角会显示很小的 github 的官方图标
         },
-        "github-buttons": {
+        "github-buttons": {  // 在右上角会显示 github 图标的 button
             "buttons": [
                 {
                     "user": "pudongping",
@@ -136,16 +143,14 @@
             ]
         },
         "donate": {
-            "wechat": "/resources/images/wechat.png",
-            "alipay": "/resources/images/alipay.png",
+            "alipay": "/resources/images/donate.png",
             "title": "\"若有共鸣，留言足矣，若有赞赏，何以复加？\"",
             "button": "赞赏",
-            "wechatText": "微信",
-            "alipayText": "支付宝"
+            "alipayText": "微信/支付宝/QQ"
         },
         "anchor-navigation-ex": {
-            "showLevel": false,
-            "showGoTop": false
+            "showLevel": true,  // 右上角浮层目录显示序号
+            "showGoTop": false  // 不显示回到顶部的图标，不建议开启这个属性，因为这个图标总是显示，不像 “back-to-top-button” 插件还可以自动显示和隐藏
         },
         "meta": {
             "data": [
@@ -156,23 +161,19 @@
             ]
         },
         "mygitalk": {
-            "clientID": "",
-            "clientSecret": "",
-            "repo": "",
-            "owner": "",
-            "admin": [
-                ""
+            "clientID": "",  // GitHub 开发者设置，客户端连接标识
+            "clientSecret": "",  // GitHub 开发者设置，客户端秘钥
+            "repo": "",  // GitHub 仓库名
+            "owner": "",  // GitHub 仓库所有者
+            "admin": [  // GitHub 仓库管理者，支持多个管理者
+                "admin-1",
+                "admin-2"
             ],
-            "distractionFreeMode": false
+            "distractionFreeMode": false  // 类似 Facebook 评论框的全屏遮罩效果,默认值: false
         },
         "change_girls": {
-            "time": 10,
+            "time": 5,  // 每 5 秒切换一次背景
             "urls": [
-                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605033629072&di=320b0ac6bc929e746a17eb0d03e3548e&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fc%2F574420055d0b9.jpg",
-                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605033462889&di=d0aad2c6385f42e75ba3b87a675a2605&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F0%2F58637eafc3386.jpg",
-                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605033462890&di=b1902b09da5443df217191c4c3d03ccd&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fc%2F597021760b630.jpg",
-                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605033462894&di=f8ba5bcca83ccc6fb686d336075d3fa6&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fb%2F57357af40928a.jpg",
-                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605032839109&di=947b3f5ffdbe4cc72e0f93d2e6a30e08&imgtype=0&src=http%3A%2F%2Fdik.img.kttpdq.com%2Fpic%2F40%2F27947%2F89a448f7077194f1.jpg",
                 "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605033246957&di=d6170f1a9f0466f270ad1baee847eab9&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fe%2F55f26f55e9138.jpg",
                 "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605033334002&di=4ef73db6c98fb737f5a3068670160056&imgtype=0&src=http%3A%2F%2Fww3.sinaimg.cn%2Flarge%2Fd2e27164gw1fbmwbgf0mij21hc0u0487.jpg"
             ]
@@ -184,12 +185,14 @@
             "autoFit": true
         },
         "image-captions": {
-            "caption": "_PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_ - sugaryesp 的笔记"
+            "caption": "sugaryesp 的笔记 - _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_"
         },
         "edit-link-plus": {
             "base": {
+                "edit-link-name-1": "edit-link-1",
+                "edit-link-name-2": "edit-link-2"
             },
-            "defaultBase": "",
+            "defaultBase": "",  // 这里填写链接地址
             "label": "编辑本页"
         },
         "sitemap-general": {

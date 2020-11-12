@@ -1,5 +1,3 @@
 # Introduction
 
-LIVE AND LEARN
-
-简单的一个介绍内容
+<center><div style="color: red;">SELECT * FROM LEARNS WHERE LIVE IS NOT NULL</div></center>

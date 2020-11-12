@@ -27,16 +27,21 @@
   * [gogs软件包](https://dl.gogs.io/0.10.1/windows_amd64.zip) windows-64位版本
 
 # 安装
-1. 将下载的 gogs_0.11.86_windows_amd64.zip 压缩包文件解压。
+
+### 将下载的 gogs_0.11.86_windows_amd64.zip 压缩包文件解压。
+
 > 本文解压在 E:\soft-exe 目录下
 
 ![解压出来是 gogs 文件夹](https://upload-images.jianshu.io/upload_images/14623749-90a40366e1de646b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-2. 创建数据库
+### 创建数据库
+
 > 可以直接去执行 E:\soft-exe\gogs\scripts\mysql.sql 文件，创建 gogs 数据库。（当然也可以自己去创建数据库名为 gogs 的数据库，但是建议还是直接执行 mysql.sql 脚本，毕竟官方建议）
 
 mysql.sql 中的内容为以下：
+
 ```
+
 SET GLOBAL innodb_file_per_table = ON,
            innodb_file_format = Barracuda,
            innodb_large_prefix = ON;
@@ -44,14 +49,21 @@ DROP DATABASE IF EXISTS gogs;
 CREATE DATABASE IF NOT EXISTS gogs CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 
 ```
-3. 安装 git 
+
+### 安装 git   
+
 这个貌似没有什么太多需要讲的，直接根据上面提供的链接地址下载 git 最新版，之后一直下一步安装即可。
-4. 注册 gogs 服务
-  * 修改 E:\soft-exe\gogs\scripts\windows\install-as-service.bat ,将其中的
+
+### 注册 gogs 服务
+
+* 修改 E:\soft-exe\gogs\scripts\windows\install-as-service.bat ,将其中的
+
 ```
 SET gogspath=C:/gogs
 ```
+
 修改成你本地的 gogs 安装路径。
+
 
 ![找到 install-as-service.bat 文件](https://upload-images.jianshu.io/upload_images/14623749-8b353dd27ef518c9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -70,19 +82,21 @@ SET gogspath=C:/gogs
 > 同样也可以使用手动执行命令去执行 install-as-service.bat 文件   
 手动执行命令的方法为：在 install-as-service.bat 文件所在文件夹下，随便点击一下空白处，然后按住 shift键，点击鼠标右键，点击 **在此处打开命令窗口** 输入 gogs web 命令，回车即可。
 
-5. 测试
+### 测试
+
 浏览器访问：127.0.0.1:3000 即可进入配置页面（我只修改了代码仓库存放路径这一项）。（在此页面并不一定非要注册用户，我测试的时候，虽然注册了一个用户，但是最后发现还是需要再重新注册）完成配置后，E:\soft-exe\gogs\custom\conf 目录下会生成一个新的 app.ini 配置文件。
 
 ![E:\soft-exe\gogs\custom\conf 路径下生成了 app.ini 配置文件](https://upload-images.jianshu.io/upload_images/14623749-585db4ac286d6008.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![打开 app.ini 配置文件，发现里面的内容为在浏览器中输入的内容](https://upload-images.jianshu.io/upload_images/14623749-02ed41e662d49c21.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-6. 注册用户（系统默认第一个用户为系统管理员）
+### 注册用户（系统默认第一个用户为系统管理员）
+
 再次访问 127.0.0.1:3000 ，点击注册。
 
 ![我本地测试的电脑未安装 .net 框架，因此样式乱掉了](https://upload-images.jianshu.io/upload_images/14623749-d80ab87d33fc9f1b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-7. 创建测试仓库
+### 创建测试仓库
 
 ![image.png](https://upload-images.jianshu.io/upload_images/14623749-387e54229c30b0c9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
