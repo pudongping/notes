@@ -5,7 +5,7 @@
     "language": "zh-hans",
     "gitbook": "3.2.3",
     "styles": {
-        "website": "./resources/styles/website.css"
+        "website": "resources/styles/website.css"
     },
     "structure": {
         "readme": "INTRODUCTION.md"
@@ -107,7 +107,7 @@
             }
         },
         "insert-logo": {
-            "url": "/resources/images/favicon.png",
+            "url": "resources/images/favicon.png",
             "style": "background: none; max-height: 30px; min-height: 30px"
         },
         "prism": {

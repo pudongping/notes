@@ -5,7 +5,7 @@
     "language": "zh-hans",  // 可使用的语言：en, ar, bn, cs, de, en, es, fa, fi, fr, he, it, ja, ko, no, pl, pt, ro, ru, sv, uk, vi, zh-hans, zh-tw 这里我选择的是简体中文 zh-hans
     "gitbook": "3.2.3",  // 指定使用的 gitbook 版本
     "styles": {  // 自定义页面样式
-        "website": "./resources/styles/website.css",  // 当此时的 gitbook 输出为站点模式时使用的 css 样式
+        "website": "resources/styles/website.css",  // 当此时的 gitbook 输出为站点模式时使用的 css 样式
         // "ebook": "styles/ebook.css",  // 当此时的 gitbook 输出为 ebook 时使用的 css 样式
         // "pdf": "styles/pdf.css",  // 当此时的 gitbook 输出为 pdf 时使用的 css 样式
         // "mobi": "styles/mobi.css",
@@ -105,16 +105,16 @@
             ]
         },
         "favicon": {
-            "shortcut": "./resources/images/favicon.ico",
-            "bookmark": "./resources/images/favicon.ico",
-            "appleTouch": "./resources/images/favicon.png",
+            "shortcut": "resources/images/favicon.ico",
+            "bookmark": "resources/images/favicon.ico",
+            "appleTouch": "resources/images/favicon.png",
             "appleTouchMore": {
-                "120x120": "./resources/images/apple-touch-icon-120x120.png",
-                "180x180": "./resources/images/apple-touch-icon-180x180.png"
+                "120x120": "resources/images/apple-touch-icon-120x120.png",
+                "180x180": "resources/images/apple-touch-icon-180x180.png"
             }
         },
         "insert-logo": {
-            "url": "/resources/images/favicon.png",
+            "url": "resources/images/favicon.png",
             "style": "background: none; max-height: 30px; min-height: 30px"
         },
         "prism": {
@@ -143,7 +143,7 @@
             ]
         },
         "donate": {
-            "alipay": "/resources/images/donate.png",
+            "alipay": "resources/images/donate.png",
             "title": "\"若有共鸣，留言足矣，若有赞赏，何以复加？\"",
             "button": "赞赏",
             "alipayText": "微信/支付宝/QQ"
