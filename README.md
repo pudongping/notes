@@ -3,34 +3,34 @@
     <p align="center">三观比五官正，思想比套路深的 live and learn's coder。😘</p>
 </p>
 <p align="center">
-    <a href="https://pudongping.github.io/glory" target="_blank">
+    <a href="https://github.com/pudongping/pudongping.github.io" target="_blank">
         <img alt="GitHub Workflow Status" src="https://img.shields.io/badge/notes-gitbook--notes-orange">
     </a>
-    <a href="https://pudongping.github.io/glory" target="_blank">
-        <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/pudongping/glory">
+    <a href="https://github.com/pudongping/pudongping.github.io" target="_blank">
+        <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/pudongping/pudongping.github.io">
     </a>
-    <a href="https://pudongping.github.io/glory" target="_blank">
-        <img alt="Issues" src="https://img.shields.io/github/issues/pudongping/glory" />
+    <a href="https://github.com/pudongping/pudongping.github.io" target="_blank">
+        <img alt="Issues" src="https://img.shields.io/github/issues/pudongping/pudongping.github.io" />
     </a>
-    <a href="https://pudongping.github.io/glory/pulls" target="_blank">
-        <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/pudongping/glory" />
+    <a href="https://github.com/pudongping/pudongping.github.io/pulls" target="_blank">
+        <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/pudongping/pudongping.github.io" />
     </a>
-    <a href="https://pudongping.github.io/glory" target="_blank">
-        <img alt="GitHub" src="https://img.shields.io/github/license/pudongping/glory">
+    <a href="https://github.com/pudongping/pudongping.github.io" target="_blank">
+        <img alt="GitHub" src="https://img.shields.io/github/license/pudongping/pudongping.github.io">
     </a>
 <br/>
 <br/>
-    <a href="https://pudongping.github.io/glory" target="_blank">
+    <a href="https://github.com/pudongping/pudongping.github.io" target="_blank">
         <img alt="GitHub followers" src="https://img.shields.io/github/followers/pudongping?style=social">
     </a>
-    <a href="https://pudongping.github.io/glory" target="_blank">
-        <img alt="GitHub forks" src="https://img.shields.io/github/forks/pudongping/glory?style=social">
+    <a href="https://github.com/pudongping/pudongping.github.io" target="_blank">
+        <img alt="GitHub forks" src="https://img.shields.io/github/forks/pudongping/pudongping.github.io?style=social">
     </a>
-    <a href="https://pudongping.github.io/glory" target="_blank">
-        <img alt="GitHub stars" src="https://img.shields.io/github/stars/pudongping/glory?style=social">
+    <a href="https://github.com/pudongping/pudongping.github.io" target="_blank">
+        <img alt="GitHub stars" src="https://img.shields.io/github/stars/pudongping/pudongping.github.io?style=social">
     </a>
-    <a href="https://github.com/pudongping/glory" target="_blank">
-        <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/pudongping/glory?style=social">
+    <a href="https://github.com/pudongping/pudongping.github.io" target="_blank">
+        <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/pudongping/pudongping.github.io?style=social">
     </a>
 </p>
 <p align="center">喜欢这个笔记？可以考虑通过 <a href="./resources/images/wechat.png" target="_blank">赞赏</a> 来帮助它完善！</p>
@@ -38,7 +38,12 @@
 
 # 简介
 
-本仓库主要用来记录本人在编程路上的笔记，笔记内容有原创，也有借鉴，若不慎侵权，请联系我，我会及时删除。
+本仓库主要用来记录本人在编程路上的笔记，笔记内容有原创，也有借鉴，若不慎侵权，请联系我，我会及时删除。  
+
+## 在线访问我的笔记
+- [![SugarYesP 削个椰子皮_给个梨的笔记](https://img.shields.io/badge/SugarYesP_削个椰子皮_给个梨的笔记-https://drling.xin-brightgreen.svg)](https://drling.xin)
+- [![Gitee](https://img.shields.io/badge/GiteePages-https://pudongping.gitee.io-brightgreen.svg)](https://pudongping.gitee.io)
+- [![Github](https://img.shields.io/badge/GithubPages-https://pudongping.github.io-brightgreen.svg)](https://pudongping.github.io)
 
 ### 个人微信号
 
@@ -53,8 +58,8 @@
 
 #### 仓库地址
 
-- [Github](git@github.com:pudongping/glory.git)
-- [Gitee](git@gitee.com:pudongping/glory.git)
+- [Github](https://github.com/pudongping/pudongping.github.io.git)
+- [Gitee](https://gitee.com/pudongping/pudongping.git)
 
 #### 本地部署
 
@@ -62,7 +67,7 @@
 
 
 ```bash
-git clone git@github.com:pudongping/glory.git  && cd glory
+git clone https://gitee.com/pudongping/pudongping.git glory  && cd glory
 ```
 
 
@@ -117,12 +122,6 @@ gitbook build ./
 - README.md ： 项目说明文件
 - SUMMARY.md ： gitbook 目录文件
 
-### 在线访问我的笔记
-
-- [My own notes](http://notes.drling.xin/)
-- [GitHub Pages](https://pudongping.github.io/glory)
-- [Gitee Pages](https://pudongping.gitee.io/glory)
-
 ### 感谢支持
 
 如果你觉得本教程对你有所帮助,请帮忙给个 `Star`。  
@@ -146,4 +145,4 @@ gitbook build ./
 </div>
 
 
-> 若有共鸣，留言足矣，若有赞赏，何以复加？
+> 😘 若有共鸣，留言足矣，若有赞赏，何以复加？ 🤞

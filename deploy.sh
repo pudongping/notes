@@ -2,7 +2,7 @@
 # 手动发布静态文件到 GitHub
 
 # 定义 github 仓库地址，和存放静态页面的分支，使用前请修改这两个变量的值
-my_repo='git@github.com:pudongping/glory.git'
+my_repo='git@github.com:pudongping/pudongping.github.io.git'
 my_branch='gh-pages'
 
 # 定义该变量为只读

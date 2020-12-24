@@ -41,7 +41,7 @@
         "donate",
         "anchor-navigation-ex",
         "meta",
-        "-mygitalk",
+        "mygitalk",
         "change_girls",
         "simple-mind-map",
         "image-captions",
@@ -128,7 +128,7 @@
             "buttons": [
                 {
                     "user": "pudongping",
-                    "repo": "glory",
+                    "repo": "pudongping.github.io",
                     "type": "star",
                     "count": true,
                     "size": "small"
@@ -156,9 +156,9 @@
             ]
         },
         "mygitalk": {
-            "clientID": "1c8aa4ea706a35be21f5",
-            "clientSecret": "1fdfdb3192d912408bac4729ef10d23971cc37c8",
-            "repo": "glory",
+            "clientID": "93f93b4614dfc097eff5",
+            "clientSecret": "4f3268c0da545ca870d8fb10bc76347bfe46c00e",
+            "repo": "pudongping.github.io",
             "owner": "pudongping",
             "admin": [
                 "pudongping"
@@ -188,10 +188,10 @@
         },
         "edit-link-plus": {
             "base": {
-                "pudongping.github.io": "https://github.com/pudongping/glory/edit/main",
-                "pudongping.gitee.io": "https://gitee.com/pudongping/glory/edit/main"
+                "pudongping.github.io": "https://github.com/pudongping/pudongping.github.io/edit/main",
+                "pudongping.gitee.io": "https://gitee.com/pudongping/pudongping/edit/main"
             },
-            "defaultBase": "https://github.com/pudongping/glory/edit/main",
+            "defaultBase": "https://github.com/pudongping/pudongping.github.io/edit/main",
             "label": "编辑本页"
         },
         "sitemap-general": {

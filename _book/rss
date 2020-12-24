@@ -4,7 +4,7 @@
         <description><![CDATA[削个椰子皮_给个梨的笔记]]></description>
         <link>http://notes.drling.xin</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 12 Nov 2020 16:30:39 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 24 Dec 2020 12:59:54 GMT</lastBuildDate>
         <atom:link href="http://notes.drling.xin/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Alex]]></author>
         <managingEditor><![CDATA[276558492@qq.com (Alex Pu)]]></managingEditor>
@@ -17,7 +17,7 @@
         <category><![CDATA[python]]></category>
         <category><![CDATA[vue.js]]></category>
         <item>
-            <title><![CDATA[No title]]></title>
+            <title><![CDATA[目录]]></title>
             <link>http://notes.drling.xinINTRODUCTION.html</link>
             <guid isPermaLink="true">http://notes.drling.xinINTRODUCTION.html</guid>
             <dc:creator><![CDATA[Alex]]></dc:creator>
