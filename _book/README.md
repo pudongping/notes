@@ -4,7 +4,7 @@
 </p>
 <p align="center">
     <a href="https://github.com/pudongping/pudongping.github.io" target="_blank">
-        <img alt="GitHub Workflow Status" src="https://img.shields.io/badge/notes-gitbook--notes-orange">
+        <img alt="GitHub Workflow Status" src="https://img.shields.io/badge/notes-Alex's--gitbook--notes-orange">
     </a>
     <a href="https://github.com/pudongping/pudongping.github.io" target="_blank">
         <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/pudongping/pudongping.github.io">
@@ -18,6 +18,7 @@
     <a href="https://github.com/pudongping/pudongping.github.io" target="_blank">
         <img alt="GitHub" src="https://img.shields.io/github/license/pudongping/pudongping.github.io">
     </a>
+
 <br/>
 <br/>
     <a href="https://github.com/pudongping/pudongping.github.io" target="_blank">

@@ -156,8 +156,8 @@
             ]
         },
         "mygitalk": {
-            "clientID": "93f93b4614dfc097eff5",
-            "clientSecret": "4f3268c0da545ca870d8fb10bc76347bfe46c00e",
+            "clientID": "1c8aa4ea706a35be21f5",
+            "clientSecret": "1fdfdb3192d912408bac4729ef10d23971cc37c8",
             "repo": "pudongping.github.io",
             "owner": "pudongping",
             "admin": [
