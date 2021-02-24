@@ -2,10 +2,10 @@
     <channel>
         <title><![CDATA[sugaryesp 的笔记]]></title>
         <description><![CDATA[削个椰子皮_给个梨的笔记]]></description>
-        <link>http://notes.drling.xin</link>
+        <link>http://notes.pudongping.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 25 Dec 2020 09:01:29 GMT</lastBuildDate>
-        <atom:link href="http://notes.drling.xin/rss" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Wed, 24 Feb 2021 08:19:21 GMT</lastBuildDate>
+        <atom:link href="http://notes.pudongping.com/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Alex]]></author>
         <managingEditor><![CDATA[276558492@qq.com (Alex Pu)]]></managingEditor>
         <webMaster><![CDATA[276558492@qq.com (Alex Pu)]]></webMaster>
@@ -18,36 +18,36 @@
         <category><![CDATA[vue.js]]></category>
         <item>
             <title><![CDATA[索引]]></title>
-            <link>http://notes.drling.xinINTRODUCTION.html</link>
-            <guid isPermaLink="true">http://notes.drling.xinINTRODUCTION.html</guid>
+            <link>http://notes.pudongping.comINTRODUCTION.html</link>
+            <guid isPermaLink="true">http://notes.pudongping.comINTRODUCTION.html</guid>
             <dc:creator><![CDATA[Alex]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[GitBook 使用]]></title>
             <description><![CDATA[更多详情可以参考 GitBook 官方安装文档 来安装 GitBook]]></description>
-            <link>http://notes.drling.xindoc/frontend-notes/how-to-use-gitbook.html</link>
-            <guid isPermaLink="true">http://notes.drling.xindoc/frontend-notes/how-to-use-gitbook.html</guid>
+            <link>http://notes.pudongping.comdoc/frontend-notes/how-to-use-gitbook.html</link>
+            <guid isPermaLink="true">http://notes.pudongping.comdoc/frontend-notes/how-to-use-gitbook.html</guid>
             <dc:creator><![CDATA[Alex]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[本文基于 windows7 64位 搭建 gogs]]></title>
             <description><![CDATA[解压出来是 gogs 文件夹]]></description>
-            <link>http://notes.drling.xindoc/git-notes/install-gogs-by-windows.html</link>
-            <guid isPermaLink="true">http://notes.drling.xindoc/git-notes/install-gogs-by-windows.html</guid>
+            <link>http://notes.pudongping.comdoc/git-notes/install-gogs-by-windows.html</link>
+            <guid isPermaLink="true">http://notes.pudongping.comdoc/git-notes/install-gogs-by-windows.html</guid>
             <dc:creator><![CDATA[Alex]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[CentOS 7 搭建 gogs Git 服务器]]></title>
             <description><![CDATA[<extoc></extoc>]]></description>
-            <link>http://notes.drling.xindoc/git-notes/install-gogs-by-centos7.html</link>
-            <guid isPermaLink="true">http://notes.drling.xindoc/git-notes/install-gogs-by-centos7.html</guid>
+            <link>http://notes.pudongping.comdoc/git-notes/install-gogs-by-centos7.html</link>
+            <guid isPermaLink="true">http://notes.pudongping.comdoc/git-notes/install-gogs-by-centos7.html</guid>
             <dc:creator><![CDATA[Alex]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[windows10 专业版 64位系统安装docker]]></title>
             <description><![CDATA[<extoc></extoc>]]></description>
-            <link>http://notes.drling.xindoc/docker-notes/install-docker-by-windows.html</link>
-            <guid isPermaLink="true">http://notes.drling.xindoc/docker-notes/install-docker-by-windows.html</guid>
+            <link>http://notes.pudongping.comdoc/docker-notes/install-docker-by-windows.html</link>
+            <guid isPermaLink="true">http://notes.pudongping.comdoc/docker-notes/install-docker-by-windows.html</guid>
             <dc:creator><![CDATA[Alex]]></dc:creator>
         </item>
     </channel>

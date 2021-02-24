@@ -1,5 +1,5 @@
 <p align="center">
-    <h1 align="center"><a href="https://drling.xin">Alex's notes</a></h1>
+    <h1 align="center"><a href="https://pudodngping.com">Alex's notes</a></h1>
     <p align="center">三观比五官正，思想比套路深的 live and learn's coder。😘</p>
 </p>
 <p align="center">
@@ -42,7 +42,7 @@
 本仓库主要用来记录本人在编程路上的笔记，笔记内容有原创，也有借鉴，若不慎侵权，请联系我，我会及时删除。  
 
 ## 在线访问我的笔记
-- [![SugarYesP 削个椰子皮_给个梨的笔记](https://img.shields.io/badge/SugarYesP_削个椰子皮_给个梨的笔记-https://drling.xin-brightgreen.svg)](https://drling.xin)
+- [![SugarYesP 削个椰子皮_给个梨的笔记](https://img.shields.io/badge/SugarYesP_削个椰子皮_给个梨的笔记-https://drling.xin-brightgreen.svg)](https://pudongping.com)
 - [![Gitee](https://img.shields.io/badge/GiteePages-https://pudongping.gitee.io-brightgreen.svg)](https://pudongping.gitee.io)
 - [![Github](https://img.shields.io/badge/GithubPages-https://pudongping.github.io-brightgreen.svg)](https://pudongping.github.io)
 

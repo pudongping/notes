@@ -12,7 +12,7 @@
     },
     "links": {
         "sidebar": {
-            "My Blog": "https://drling.xin/",
+            "My Blog": "https://pudongping.com/",
             "My GitHub": "https://github.com/pudongping"
         }
     },
@@ -195,14 +195,14 @@
             "label": "编辑本页"
         },
         "sitemap-general": {
-            "prefix": "http://notes.drling.xin/"
+            "prefix": "http://notes.pudongping.com/"
         },
         "rss": {
             "title": "sugaryesp 的笔记",
             "description": "削个椰子皮_给个梨的笔记",
             "author": "Alex",
-            "site_url": "http://notes.drling.xin",
-            "feed_url": "http://notes.drling.xin/rss",
+            "site_url": "http://notes.pudongping.com",
+            "feed_url": "http://notes.pudongping.com/rss",
             "managingEditor": "276558492@qq.com (Alex Pu)",
             "webMaster": "276558492@qq.com (Alex Pu)",
             "categories": [
@@ -216,7 +216,7 @@
             ]
         },
         "icp": {
-            "number": "鄂ICP备18004705号",
+            "number": "鄂ICP备18004705号-2",
             "link": "https://beian.miit.gov.cn/"
         },
         "page-copyright": {
@@ -230,7 +230,7 @@
             "utcOffset": "8",
             "style": "normal",
             "noPowered": true,
-            "baseUri": "http://notes.drling.xin/"
+            "baseUri": "http://notes.pudongping.com/"
         }
     }
 }
