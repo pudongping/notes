@@ -5,6 +5,9 @@
 my_repo='git@github.com:pudongping/pudongping.github.io.git'
 my_branch='gh-pages'
 
+current_time=`date +"%Y-%m-%d_%H:%M:%S"`
+
+
 # 定义该变量为只读
 readonly my_repo
 readonly my_branch
@@ -57,7 +60,7 @@ git add -A
 
 # 将缓存区的内容提交到本地仓库中，并新建分支和切换到新分支
 orangered "execute command  ===> git commit -m 'deploy' && git checkout -b ${my_branch}"
-git commit -m 'deploy' && git checkout -b $my_branch
+git commit -m "deploy_${current_time}" && git checkout -b $my_branch
 
 # 发布到远程仓库 gh-pages 分支，因为这里都是使用 gitbook 编译后的文件，因此可以直接通过 -f 参数覆盖掉远程分支，文件要是丢失了的话，多编译几次，再多强制推送
 orangered "execute command  ===> git push -f -u origin ${my_branch}"
