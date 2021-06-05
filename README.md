@@ -130,20 +130,16 @@ gitbook build ./
 
 ### 赞赏捐助
 
-<div style="display: flex; align-items: center; justify-content: space-around;">
-    <div style="width: 150px; text-align: center;">
-        <a href="./resources/images/alipay.png">
-            <img src="./resources/images/alipay.png" alt="alipay"/>
-        </a>
-        <p>支付宝<p>
-    </div>
-    <div style="width: 150px; text-align: center;">
-        <a href="./resources/images/wechat.png">
-            <img src="./resources/images/wechat.png" alt="wechat"/>
-        </a>
-        <p>微信<p>
-    </div>
-</div>
+<table>
+  <tr>
+    <td>
+        <img width="100" src="./resources/images/alipay.png" alt="alipay" >
+    </td>
+    <td>
+        <img width="100" src="./resources/images/wechat.png" alt="wechat" >
+    </td>
+  </tr>
+</table>
 
 
 > 😘 若有共鸣，留言足矣，若有赞赏，何以复加？ 🤞
