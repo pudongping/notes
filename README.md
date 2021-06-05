@@ -130,18 +130,16 @@ gitbook build ./
 
 ### 赞赏捐助
 
-<p align="center">
-    <table>
-      <tr>
-        <td>
-            <img width="100" src="./resources/images/alipay.png" alt="alipay" >
-        </td>
-        <td>
-            <img width="100" src="./resources/images/wechat.png" alt="wechat" >
-        </td>
-      </tr>
-    </table>
-</p>
+<table>
+  <tr>
+    <td>
+        <img width="100" src="./resources/images/alipay.png" alt="alipay" >
+    </td>
+    <td>
+        <img width="100" src="./resources/images/wechat.png" alt="wechat" >
+    </td>
+  </tr>
+</table>
 
 
 > 😘 若有共鸣，留言足矣，若有赞赏，何以复加？ 🤞
