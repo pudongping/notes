@@ -40,6 +40,8 @@
 
 本仓库主要用来记录本人在编程路上的笔记，笔记内容有原创，也有借鉴，若不慎侵权，请联系我，我会及时删除。  
 
+快速访问本项目目录索引，[请点击我](./INTRODUCTION.md)。
+
 ## 在线访问我的笔记
 - [![SugarYesP 削个椰子皮_给个梨的笔记](https://img.shields.io/badge/SugarYesP_削个椰子皮_给个梨的笔记-https://pudongping.github.io/notes/-brightgreen.svg)](https://pudongping.github.io/notes/)
 - [![Gitee](https://img.shields.io/badge/GiteePages-https://pudongping.gitee.io/notes-brightgreen.svg)](https://pudongping.gitee.io/notes)
