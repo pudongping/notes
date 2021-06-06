@@ -12,8 +12,10 @@
     },
     "links": {
         "sidebar": {
-            "My Blog": "https://pudongping.com/",
-            "My GitHub": "https://github.com/pudongping"
+            "My Blog": "https://pudongping.github.io",
+            "My Notes": "https://pudongping.github.io/notes",
+            "My GitHub": "https://github.com/pudongping",
+            "My Gitee": "https://gitee.com/pudongping"
         }
     },
     "plugins": [
@@ -128,7 +130,7 @@
             "buttons": [
                 {
                     "user": "pudongping",
-                    "repo": "pudongping.github.io",
+                    "repo": "notes",
                     "type": "star",
                     "count": true,
                     "size": "small"
@@ -158,7 +160,7 @@
         "mygitalk": {
             "clientID": "1c8aa4ea706a35be21f5",
             "clientSecret": "1fdfdb3192d912408bac4729ef10d23971cc37c8",
-            "repo": "pudongping.github.io",
+            "repo": "notes",
             "owner": "pudongping",
             "admin": [
                 "pudongping"
@@ -188,21 +190,21 @@
         },
         "edit-link-plus": {
             "base": {
-                "pudongping.github.io": "https://github.com/pudongping/pudongping.github.io/edit/main",
-                "pudongping.gitee.io": "https://gitee.com/pudongping/pudongping/edit/main"
+                "pudongping.github.io": "https://github.com/pudongping/notes/edit/main",
+                "pudongping.gitee.io": "https://gitee.com/pudongping/notes/edit/main"
             },
-            "defaultBase": "https://github.com/pudongping/pudongping.github.io/edit/main",
+            "defaultBase": "https://github.com/pudongping/notes/edit/main",
             "label": "编辑本页"
         },
         "sitemap-general": {
-            "prefix": "http://notes.pudongping.com/"
+            "prefix": "https://pudongping.github.io/notes"
         },
         "rss": {
             "title": "sugaryesp 的笔记",
             "description": "削个椰子皮_给个梨的笔记",
             "author": "Alex",
-            "site_url": "http://notes.pudongping.com",
-            "feed_url": "http://notes.pudongping.com/rss",
+            "site_url": "https://pudongping.github.io/notes",
+            "feed_url": "https://pudongping.github.io/notes/rss",
             "managingEditor": "276558492@qq.com (Alex Pu)",
             "webMaster": "276558492@qq.com (Alex Pu)",
             "categories": [
@@ -230,7 +232,7 @@
             "utcOffset": "8",
             "style": "normal",
             "noPowered": true,
-            "baseUri": "http://notes.pudongping.com/"
+            "baseUri": "https://pudongping.github.io/notes"
         }
     }
 }

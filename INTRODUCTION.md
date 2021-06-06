@@ -5,10 +5,10 @@
 # 索引
 
 ## 在线访问我的笔记
-- [SugarYesP 削个椰子皮_给个梨的博客](https://drling.xin)
-- [SugarYesP 削个椰子皮_给个梨的笔记](http://notes.drling.xin/)
-- [GiteePages](https://pudongping.gitee.io)
-- [GithubPages](https://pudongping.github.io)
+- [SugarYesP 削个椰子皮_给个梨的博客](https://pudongping.github.io)
+- [SugarYesP 削个椰子皮_给个梨的笔记](https://pudongping.github.io/notes)
+- [GiteePages](https://pudongping.gitee.io/notes)
+- [GithubPages](https://pudongping.github.io/notes)
 
 ## 当前笔记目录
 
