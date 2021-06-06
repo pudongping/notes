@@ -5,7 +5,7 @@
     "language": "zh-hans",
     "gitbook": "3.2.3",
     "styles": {
-        "website": "./resources/styles/website.css"
+        "website": "https://pudongping.github.io/notes/resources/styles/website.css"
     },
     "structure": {
         "readme": "INTRODUCTION.md"
@@ -100,16 +100,16 @@
             ]
         },
         "favicon": {
-            "shortcut": "./resources/images/favicon.ico",
-            "bookmark": "./resources/images/favicon.ico",
-            "appleTouch": "./resources/images/favicon.png",
+            "shortcut": "https://pudongping.github.io/notes/resources/images/favicon.ico",
+            "bookmark": "https://pudongping.github.io/notes/resources/images/favicon.ico",
+            "appleTouch": "https://pudongping.github.io/notes/resources/images/favicon.png",
             "appleTouchMore": {
-                "120x120": "./resources/images/apple-touch-icon-120x120.png",
-                "180x180": "./resources/images/apple-touch-icon-180x180.png"
+                "120x120": "https://pudongping.github.io/notes/resources/images/apple-touch-icon-120x120.png",
+                "180x180": "https://pudongping.github.io/notes/resources/images/apple-touch-icon-180x180.png"
             }
         },
         "insert-logo": {
-            "url": "/resources/images/favicon.png",
+            "url": "https://pudongping.github.io/notes/resources/images/favicon.png",
             "style": "background: none; max-height: 30px; min-height: 30px"
         },
         "prism": {
@@ -138,8 +138,8 @@
             ]
         },
         "donate": {
-            "wechat": "/resources/images/wechat.png",
-            "alipay": "/resources/images/alipay.png",
+            "wechat": "https://pudongping.github.io/notes/resources/images/wechat.png",
+            "alipay": "https://pudongping.github.io/notes/resources/images/alipay.png",
             "title": "\"若有共鸣，留言足矣，若有赞赏，何以复加？\"",
             "button": "赞赏",
             "wechatText": "微信",
@@ -158,8 +158,8 @@
             ]
         },
         "mygitalk": {
-            "clientID": "1c8aa4ea706a35be21f5",
-            "clientSecret": "1fdfdb3192d912408bac4729ef10d23971cc37c8",
+            "clientID": "8f9c9e11f169577a768b",
+            "clientSecret": "507d601f0b338c9908dfeb7f198b89514345748e",
             "repo": "notes",
             "owner": "pudongping",
             "admin": [
