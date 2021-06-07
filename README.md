@@ -125,7 +125,7 @@ gitbook build ./
 - SUMMARY.md ： gitbook 目录文件
 
 ## 项目截图
-- [页面截图](https://pudongping.github.io/notes/resources/images/sample/page.png)
+![页面截图](https://pudongping.github.io/notes/resources/images/sample/page.png)
 
 ### 感谢支持
 
