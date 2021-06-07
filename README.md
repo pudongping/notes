@@ -124,6 +124,9 @@ gitbook build ./
 - README.md ： 项目说明文件
 - SUMMARY.md ： gitbook 目录文件
 
+## 项目截图
+- [页面截图](https://pudongping.github.io/notes/resources/images/sample/page.png)
+
 ### 感谢支持
 
 如果你觉得本教程对你有所帮助,请帮忙给个 `Star`。  
