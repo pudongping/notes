@@ -19,3 +19,4 @@ _book
 .idea
 .vscode
 .DS_Store
+my_server_deploy.sh

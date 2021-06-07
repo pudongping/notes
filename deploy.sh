@@ -1,21 +1,6 @@
 #!/bin/bash
 # 手动发布静态文件到 GitHub
 
-# 定义 github 仓库地址，和存放静态页面的分支，使用前请修改这两个变量的值
-my_repo='git@github.com:pudongping/notes.git'
-my_branch='gh-pages'
-
-# 当前发布时间
-current_time=`date +"%Y-%m-%d %H:%M:%S"`
-# 发布代码目录
-temp_deploy='.deploy_git'
-# gitbook脚本目录
-gitbook_path=$(which gitbook)
-
-# 定义该变量为只读
-readonly my_repo
-readonly my_branch
-
 # 定义颜色系列函数
 
 # blue to echo
@@ -37,6 +22,32 @@ function orangered(){
 function yellow(){
     echo -e "\033[33m\033[01m[ $1 ]\033[0m"
 }
+
+# 定义 github 仓库地址，和存放静态页面的分支，使用前请修改这两个变量的值
+case $1 in
+'github')
+  my_repo='git@github.com:pudongping/notes.git'
+  ;;
+'gitee')
+  my_repo='git@gitee.com:pudongping/notes.git'
+  ;;
+  *)
+  orangered "please type 'github' or 'gitee' to deploy"
+  ;;
+esac
+
+my_branch='gh-pages'
+
+# 当前发布时间
+current_time=`date +"%Y-%m-%d %H:%M:%S"`
+# 发布代码目录
+temp_deploy='.deploy_git'
+# gitbook脚本目录
+gitbook_path=$(which gitbook)
+
+# 定义该变量为只读
+readonly my_repo
+readonly my_branch
 
 # 判断是否存在 gitbook 命令
 if [ ! -f "$gitbook_path" ];then
@@ -75,7 +86,7 @@ git commit -m "Site updated: ${current_time}" && git checkout -b $my_branch
 orangered "execute command  ===> git push -f -u origin ${my_branch}"
 git push -f -u origin $my_branch
 
-# 返回上层目录，并删除临时目录 
+# 返回上层目录，并删除临时目录
 # ====> 发布完毕之后一定要删除发布代码的目录，不然每次发布的时候，都会将发布代码的目录编译进去，多次发布后，将会使得代码仓库成指数级别增长，造成仓库巨大
 orangered "execute command  ===> cd ../ && rm -rf ./$temp_deploy"
 cd ../ && rm -rf ./$temp_deploy
