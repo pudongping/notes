@@ -93,7 +93,7 @@ gitbook serve
 
 可以打开浏览器访问 `localhost:4000` 或者 `127.0.0.1:4000` 进行访问
 
-> 如果安装过程中，不知道如何使用 `gitbook` 可以参考我写的这篇 `gitbook` 教程 [Gitbook 使用](/doc/frontend-notes/how-to-use-gitbook.md)
+> 如果安装过程中，不知道如何使用 `gitbook` 可以参考我写的这篇 `gitbook` 教程 [Gitbook 使用](https://pudongping.github.io/posts/b00f410f.html)
 
 
 #### 线上部署

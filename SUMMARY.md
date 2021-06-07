@@ -17,19 +17,17 @@
 - [python 高阶函数](doc/python-notes/high-func.md)
 - [python 高级特性](doc/python-notes/high-features.md)
 
-### Frontend 系列
-
-- [GitBook 使用](doc/frontend-notes/how-to-use-gitbook.md)
-
 ---
 
 ### Git 系列
 
-- [windows 下搭建 git 服务器 gogs](doc/git-notes/install-gogs-by-windows.md)
-- [CentOS 7 搭建 gogs Git 服务器](doc/git-notes/install-gogs-by-centos7.md)
+- [git 相关命令](doc/git-notes/command.md)
+- [git bug 分支](doc/git-notes/branch-bug.md)
+- [git 标签](doc/git-notes/tags.md)
 
 ---
 
 ### Docker 系列
 
-- [windows10 专业版 64位系统安装docker并使用 laradock 搭建 laravel 环境](doc/docker-notes/install-docker-by-windows.md)
+- [docker 常见命令](doc/docker-notes/command.md)
+- [laradock 笔记](doc/docker-notes/about-laradock.md)
