@@ -1,5 +1,5 @@
 {
-    "title": "Alex's Notes",
+    "title": "蒲东平的编程笔记",
     "author": "Alex",
     "description": "live and learn",
     "language": "zh-hans",
@@ -100,12 +100,12 @@
             ]
         },
         "favicon": {
-            "shortcut": "https://pudongping.github.io/notes/resources/images/favicon.ico",
-            "bookmark": "https://pudongping.github.io/notes/resources/images/favicon.ico",
-            "appleTouch": "https://pudongping.github.io/notes/resources/images/favicon.png",
+            "shortcut": "./resources/images/favicon.ico",
+            "bookmark": "./resources/images/favicon.ico",
+            "appleTouch": "./resources/images/favicon.png",
             "appleTouchMore": {
-                "120x120": "https://pudongping.github.io/notes/resources/images/apple-touch-icon-120x120.png",
-                "180x180": "https://pudongping.github.io/notes/resources/images/apple-touch-icon-180x180.png"
+                "120x120": "./resources/images/apple-touch-icon-120x120.png",
+                "180x180": "./resources/images/apple-touch-icon-180x180.png"
             }
         },
         "insert-logo": {
@@ -203,14 +203,14 @@
             "label": "编辑本页"
         },
         "sitemap-general": {
-            "prefix": "https://pudongping.github.io/notes"
+            "prefix": "https://notes.pudongping.com"
         },
         "rss": {
-            "title": "sugaryesp 的笔记",
+            "title": "蒲东平的编程笔记",
             "description": "削个椰子皮_给个梨的笔记",
             "author": "Alex",
-            "site_url": "https://pudongping.github.io/notes",
-            "feed_url": "https://pudongping.github.io/notes/rss",
+            "site_url": "https://notes.pudongping.com",
+            "feed_url": "https://notes.pudongping.com/rss",
             "managingEditor": "276558492@qq.com (Alex Pu)",
             "webMaster": "276558492@qq.com (Alex Pu)",
             "categories": [
@@ -220,7 +220,8 @@
                 "github",
                 "php",
                 "python",
-                "vue.js"
+                "vue.js",
+                "node.js"
             ]
         },
         "icp": {
@@ -238,7 +239,7 @@
             "utcOffset": "8",
             "style": "normal",
             "noPowered": true,
-            "baseUri": "https://pudongping.github.io/notes"
+            "baseUri": "https://notes.pudongping.com"
         }
     }
 }
