@@ -1,0 +1,237 @@
+{
+    "title": "Alex's Notes",  // 设置书本的标题
+    "author": "Alex",  // 作者的相关信息
+    "description": "live and learn",  // 本书的简单描述
+    "language": "zh-hans",  // 可使用的语言：en, ar, bn, cs, de, en, es, fa, fi, fr, he, it, ja, ko, no, pl, pt, ro, ru, sv, uk, vi, zh-hans, zh-tw 这里我选择的是简体中文 zh-hans
+    "gitbook": "3.2.3",  // 指定使用的 gitbook 版本
+    "styles": {  // 自定义页面样式
+        "website": "resources/styles/website.css",  // 当此时的 gitbook 输出为站点模式时使用的 css 样式
+        // "ebook": "styles/ebook.css",  // 当此时的 gitbook 输出为 ebook 时使用的 css 样式
+        // "pdf": "styles/pdf.css",  // 当此时的 gitbook 输出为 pdf 时使用的 css 样式
+        // "mobi": "styles/mobi.css",
+        // "epub": "styles/epub.css"        
+    },
+    "structure": {  // 指定 Readme、Summary、Glossary 和 Languages 对应的文件名
+        "readme": "README.md",  // 该书的介绍 （默认会创建）
+        "summary": "SUMMARY.md",  // 该书的章节结构 （默认会创建）
+        // "glossary": "GLOSSARY.md",  // 多语言书籍
+        // "languages": "LANGS.md",  // 术语描述的清单
+    },
+    "links": {  // 在左侧导航栏添加链接信息
+        "sidebar": {
+            "我的博客": "https://drling.xin/",
+            "GitHub": "https://github.com/pudongping"
+        }
+    },
+    "plugins": [  // 需要使用的插件列表，注释插件的时候直接在插件名称前加 “横杠 -”，比如注释 “highlight” 插件为 “-highlight”
+        "-highlight",
+        "-lunr",
+        "-search",
+        "search-pro",
+        "-sharing",
+        "sharing-plus",
+        "fontsettings",
+        "livereload",
+        "expandable-chapters-small",
+        "chapter-fold",
+        "splitter",
+        "hide-element",
+        "back-to-top-button",
+        "favicon",
+        "insert-logo",
+        "pageview-count",
+        "code",
+        "prism",
+        "lightbox",
+        "github",
+        "github-buttons",
+        "donate",
+        "anchor-navigation-ex",
+        "meta",
+        "mygitalk",
+        "change_girls",
+        "simple-mind-map",
+        "image-captions",
+        "todo",
+        "edit-link-plus",
+        "sitemap-general",
+        "rss",
+        "icp",
+        "theme-comscore",
+        "page-copyright"
+    ],
+    "pluginsConfig": {
+        "sharing": {
+            "douban": true,
+            "facebook": false,
+            "google": true,
+            "hatenaBookmark": false,
+            "instapaper": false,
+            "line": false,
+            "linkedin": false,
+            "messenger": false,
+            "pocket": false,
+            "qq": true,
+            "qzone": true,
+            "stumbleupon": false,
+            "twitter": false,
+            "viber": false,
+            "vk": false,
+            "weibo": true,
+            "whatsapp": false,
+            "all": [
+                "douban",
+                "facebook",
+                "google",
+                "hatenaBookmark",
+                "instapaper",
+                "line",
+                "linkedin",
+                "messenger",
+                "pocket",
+                "qq",
+                "qzone",
+                "stumbleupon",
+                "twitter",
+                "viber",
+                "vk",
+                "weibo",
+                "whatsapp"
+            ]
+        },
+        "hide-element": {
+            "elements": [
+                "a.gitbook-link[href='https://www.gitbook.com']"
+            ]
+        },
+        "favicon": {
+            "shortcut": "resources/images/favicon.ico",
+            "bookmark": "resources/images/favicon.ico",
+            "appleTouch": "resources/images/favicon.png",
+            "appleTouchMore": {
+                "120x120": "resources/images/apple-touch-icon-120x120.png",
+                "180x180": "resources/images/apple-touch-icon-180x180.png"
+            }
+        },
+        "insert-logo": {
+            "url": "resources/images/favicon.png",
+            "style": "background: none; max-height: 30px; min-height: 30px"
+        },
+        "prism": {
+            "css": [
+                "prismjs/themes/prism-solarizedlight.css"
+            ],
+            "lang": {
+                "shell": "bash"
+            }
+        },
+        "lightbox": {
+            "sameUuid": true  // 开启了这个属性之后支持在弹层，左右切换图片
+        },
+        "github": {
+            "url": "https://github.com/pudongping"  // 在右上角会显示很小的 github 的官方图标
+        },
+        "github-buttons": {  // 在右上角会显示 github 图标的 button
+            "buttons": [
+                {
+                    "user": "pudongping",
+                    "repo": "glory",
+                    "type": "star",
+                    "count": true,
+                    "size": "small"
+                }
+            ]
+        },
+        "donate": {
+            "alipay": "resources/images/donate.png",
+            "title": "\"若有共鸣，留言足矣，若有赞赏，何以复加？\"",
+            "button": "赞赏",
+            "alipayText": "微信/支付宝/QQ"
+        },
+        "anchor-navigation-ex": {
+            "showLevel": true,  // 右上角浮层目录显示序号
+            "showGoTop": false  // 不显示回到顶部的图标，不建议开启这个属性，因为这个图标总是显示，不像 “back-to-top-button” 插件还可以自动显示和隐藏
+        },
+        "meta": {
+            "data": [
+                {
+                    "name": "referrer",
+                    "content": "never"
+                }
+            ]
+        },
+        "mygitalk": {
+            "clientID": "",  // GitHub 开发者设置，客户端连接标识
+            "clientSecret": "",  // GitHub 开发者设置，客户端秘钥
+            "repo": "",  // GitHub 仓库名
+            "owner": "",  // GitHub 仓库所有者
+            "admin": [  // GitHub 仓库管理者，支持多个管理者
+                "admin-1",
+                "admin-2"
+            ],
+            "distractionFreeMode": false  // 类似 Facebook 评论框的全屏遮罩效果,默认值: false
+        },
+        "change_girls": {
+            "time": 5,  // 每 5 秒切换一次背景
+            "urls": [
+                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605033246957&di=d6170f1a9f0466f270ad1baee847eab9&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fe%2F55f26f55e9138.jpg",
+                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605033334002&di=4ef73db6c98fb737f5a3068670160056&imgtype=0&src=http%3A%2F%2Fww3.sinaimg.cn%2Flarge%2Fd2e27164gw1fbmwbgf0mij21hc0u0487.jpg"
+            ]
+        },
+        "simple-mind-map": {
+            "type": "markdown",
+            "preset": "colorful",
+            "linkShape": "diagonal",
+            "autoFit": true
+        },
+        "image-captions": {
+            "caption": "sugaryesp 的笔记 - _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_"
+        },
+        "edit-link-plus": {
+            "base": {
+                "location.hostname-1": "edit-link-1",
+                "location.hostname-2": "edit-link-2"
+            },
+            "defaultBase": "",  // 这里填写链接地址
+            "label": "编辑本页"
+        },
+        "sitemap-general": {
+            "prefix": "http://notes.drling.xin/"
+        },
+        "rss": {
+            "title": "sugaryesp 的笔记",
+            "description": "削个椰子皮_给个梨的笔记",
+            "author": "Alex",
+            "site_url": "http://notes.drling.xin",
+            "feed_url": "http://notes.drling.xin/rss",
+            "managingEditor": "276558492@qq.com (Alex Pu)",
+            "webMaster": "276558492@qq.com (Alex Pu)",
+            "categories": [
+                "markdown",
+                "git",
+                "gitee",
+                "github",
+                "php",
+                "python",
+                "vue.js"
+            ]
+        },
+        "icp": {
+            "number": "鄂ICP备18004705号",
+            "link": "https://beian.miit.gov.cn/"
+        },
+        "page-copyright": {
+            "description": "modified at:",
+            "signature": "Alex",
+            "wisdom": "Artisan, Backend Developer & overall web enthusiast",
+            "format": "YYYY-MM-dd hh:mm:ss",
+            "copyright": "Copyright &#169; Alex",
+            "timeColor": "#666",
+            "copyrightColor": "#666",
+            "utcOffset": "8",
+            "style": "normal",
+            "noPowered": true,
+            "baseUri": "http://notes.drling.xin/"
+        }
+    }
+}

@@ -1,0 +1,775 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>python 高级特性 · 蒲东平的编程笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Alex">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-change_girls/girls.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-copyright/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta  name="referrer"  content="never" >
+    
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../git-notes/command.html" />
+    
+    
+    <link rel="prev" href="high-func.html" />
+    
+
+    <link href="https://notes.pudongping.com/rss" title="蒲东平的编程笔记" rel="alternate" type="application/rss+xml" />
+
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"pudongping","repo":"notes","type":"star","count":true,"size":"small"}]};
+    </script>
+
+    
+        <link rel="shortcut icon" href='../../resources/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../resources/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../resources/images/favicon.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../resources/images/apple-touch-icon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../resources/images/apple-touch-icon-180x180.png">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://pudongping.github.io" target="_blank" class="custom-link">My Blog</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://pudongping.github.io/notes" target="_blank" class="custom-link">My Notes</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://github.com/pudongping" target="_blank" class="custom-link">My GitHub</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://gitee.com/pudongping" target="_blank" class="custom-link">My Gitee</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Python 系列</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="basic-grammar.html">
+            
+                <a href="basic-grammar.html">
+            
+                    
+                    python 基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="data-type.html">
+            
+                <a href="data-type.html">
+            
+                    
+                    python 的基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="type.html">
+            
+                <a href="type.html">
+            
+                    
+                    python 类型判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="handle-err.html">
+            
+                <a href="handle-err.html">
+            
+                    
+                    python 错误、异常处理、记录日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="io.html">
+            
+                <a href="io.html">
+            
+                    
+                    python IO 编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="func.html">
+            
+                <a href="func.html">
+            
+                    
+                    python 函数以及传参
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="module.html">
+            
+                <a href="module.html">
+            
+                    
+                    python 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="class.html">
+            
+                <a href="class.html">
+            
+                    
+                    python 类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="high-func.html">
+            
+                <a href="high-func.html">
+            
+                    
+                    python 高阶函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.10" data-path="high-features.html">
+            
+                <a href="high-features.html">
+            
+                    
+                    python 高级特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Git 系列</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../git-notes/command.html">
+            
+                <a href="../git-notes/command.html">
+            
+                    
+                    git 相关命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../git-notes/branch-bug.html">
+            
+                <a href="../git-notes/branch-bug.html">
+            
+                    
+                    git bug 分支
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../git-notes/tags.html">
+            
+                <a href="../git-notes/tags.html">
+            
+                    
+                    git 标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Docker 系列</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../docker-notes/command.html">
+            
+                <a href="../docker-notes/command.html">
+            
+                    
+                    docker 常见命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../docker-notes/about-laradock.html">
+            
+                <a href="../docker-notes/about-laradock.html">
+            
+                    
+                    laradock 笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">JavaScript 系列</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../javascript-notes/basic-grammar.html">
+            
+                <a href="../javascript-notes/basic-grammar.html">
+            
+                    
+                    JavaScript 基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+
+    
+    <li>
+        
+        
+        
+            
+        
+        
+            <a href="https://beian.miit.gov.cn/" target="blank" class="gitbook-link">
+                鄂ICP备18004705号-2
+            </a>
+        
+    </li>
+    
+</ul>
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >python 高级特性</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#python-&#x9AD8;&#x7EA7;&#x7279;&#x6027;"><b></b>python &#x9AD8;&#x7EA7;&#x7279;&#x6027;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5207;&#x7247;"><b></b>&#x5207;&#x7247;</a></li><li><span class="title-icon "></span><a href="#&#x8FED;&#x4EE3;"><b></b>&#x8FED;&#x4EE3;</a></li><li><span class="title-icon "></span><a href="#&#x5217;&#x8868;&#x751F;&#x6210;&#x5F0F;-&#xFF08;&#x652F;&#x6301;&#xFF1A;&#x5217;&#x8868;&#x3001;&#x5143;&#x7EC4;&#x3001;&#x96C6;&#x5408;&#x3001;&#x5B57;&#x5178;&#xFF09;"><b></b>&#x5217;&#x8868;&#x751F;&#x6210;&#x5F0F; &#xFF08;&#x652F;&#x6301;&#xFF1A;&#x5217;&#x8868;&#x3001;&#x5143;&#x7EC4;&#x3001;&#x96C6;&#x5408;&#x3001;&#x5B57;&#x5178;&#xFF09;</a></li></ul></ul></div><h1 id="python-&#x9AD8;&#x7EA7;&#x7279;&#x6027;"><a name="python-&#x9AD8;&#x7EA7;&#x7279;&#x6027;" class="anchor-navigation-ex-anchor" href="#python-&#x9AD8;&#x7EA7;&#x7279;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>python &#x9AD8;&#x7EA7;&#x7279;&#x6027;</h1>
+<h2 id="&#x5207;&#x7247;"><a name="&#x5207;&#x7247;" class="anchor-navigation-ex-anchor" href="#&#x5207;&#x7247;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5207;&#x7247;</h2>
+<pre class="language-"><code class="lang-python">
+l <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+l1 <span class="token operator">=</span> l<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">]</span>  <span class="token comment"># &#x53D6;&#x524D;&#x4E09;&#x4E2A;&#x6570;</span>
+<span class="token comment"># print(l1)  # [0, 1, 2]</span>
+
+l2 <span class="token operator">=</span> l<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">]</span>  <span class="token comment"># &#x5982;&#x679C;&#x7B2C;&#x4E00;&#x4E2A;&#x7D22;&#x5F15;&#x662F; 0 &#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x8FD9;&#x4E48;&#x53D6;&#x524D;&#x4E09;&#x4E2A;&#x6570;</span>
+<span class="token comment"># print(l2)  # [0, 1, 2]</span>
+
+l3 <span class="token operator">=</span> l<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">]</span>  <span class="token comment"># &#x4ECE;&#x7D22;&#x5F15; 2 &#x5F00;&#x59CB;&#x53D6;&#x503C;&#x53D6; (5-2=3) &#x4E2A;&#x5143;&#x7D20;&#x51FA;&#x6765;</span>
+<span class="token comment"># print(l3)  # [2, 3, 4]</span>
+
+l4 <span class="token operator">=</span> l<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">:</span><span class="token punctuation">]</span>  <span class="token comment"># &#x53D6;&#x540E;&#x5341;&#x4E2A;&#x6570;</span>
+<span class="token comment"># print(l4)  # [90, 91, 92, 93, 94, 95, 96, 97, 98, 99]</span>
+
+l5 <span class="token operator">=</span> l<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span>  <span class="token comment"># &#x53D6;&#x524D; 10 &#x4E2A;&#x6570;&#xFF0C;&#x6BCF;&#x9694; 2 &#x4E2A;&#x53D6;&#x4E00;&#x4E2A;&#x6570;</span>
+<span class="token comment"># print(l5)  # [0, 2, 4, 6, 8]</span>
+
+l6 <span class="token operator">=</span> l<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">]</span>  <span class="token comment"># &#x6240;&#x6709;&#x7684;&#x6570;&#xFF0C;&#x6BCF;&#x9694; 10 &#x4E2A;&#x53D6;&#x4E00;&#x4E2A;&#x6570;</span>
+<span class="token comment"># print(l6)  # [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]</span>
+
+l7 <span class="token operator">=</span> l<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span>  <span class="token comment"># &#x4EC0;&#x4E48;&#x90FD;&#x4E0D;&#x5199;&#xFF0C;&#x5219;&#x539F;&#x6837;&#x590D;&#x5236;&#x4E00;&#x4E2A; list</span>
+<span class="token comment"># print(l7)  # [0, 1, 2, 3, &#x2026;&#x2026;, 97, 98, 99]</span>
+</code></pre>
+<h2 id="&#x8FED;&#x4EE3;"><a name="&#x8FED;&#x4EE3;" class="anchor-navigation-ex-anchor" href="#&#x8FED;&#x4EE3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FED;&#x4EE3;</h2>
+<blockquote>
+<p>&#x5982;&#x679C;&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A; list &#x6216; tuple&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; for &#x5FAA;&#x73AF;&#x6765;&#x904D;&#x5386;&#x8FD9;&#x4E2A; list  &#x6216; tuple &#xFF0C;&#x8FD9;&#x79CD;&#x904D;&#x5386;&#x6211;&#x4EEC;&#x79F0;&#x4E3A;&#x8FED;&#x4EE3;&#xFF08;Iteration&#xFF09;&#x3002;&#x53EA;&#x8981;&#x4F5C;&#x7528;&#x4E8E;&#x4E00;&#x4E2A;&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;&#xFF0C;for &#x5FAA;&#x73AF;&#x5C31;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#x3002;</p>
+</blockquote>
+<pre class="language-"><code class="lang-python">
+d <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&apos;a&apos;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">&apos;b&apos;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&apos;c&apos;</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">&apos;d&apos;</span><span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">&apos;e&apos;</span><span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">}</span>
+
+<span class="token comment"># &#x53EA;&#x8FED;&#x4EE3; key &#x65F6;</span>
+<span class="token keyword">for</span> key <span class="token keyword">in</span> d<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span>  <span class="token comment"># a b c d e </span>
+
+
+<span class="token comment"># &#x53EA;&#x8FED;&#x4EE3; value &#x65F6;</span>
+<span class="token keyword">for</span> value <span class="token keyword">in</span> d<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>  <span class="token comment"># 1 2 3 4 5</span>
+
+<span class="token comment"># &#x540C;&#x65F6;&#x8FED;&#x4EE3; key &#x548C; value &#x65F6;</span>
+<span class="token keyword">for</span> k<span class="token punctuation">,</span>v <span class="token keyword">in</span> d<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&apos;the key is </span><span class="token interpolation"><span class="token punctuation">{</span>k<span class="token punctuation">}</span></span><span class="token string"> and the value is </span><span class="token interpolation"><span class="token punctuation">{</span>v<span class="token punctuation">}</span></span><span class="token string">&apos;</span></span><span class="token punctuation">)</span>
+
+<span class="token comment"># output    </span>
+<span class="token comment"># the key is a and the value is 1</span>
+<span class="token comment"># the key is b and the value is 2</span>
+<span class="token comment"># the key is c and the value is 3</span>
+<span class="token comment"># the key is d and the value is 4</span>
+<span class="token comment"># the key is e and the value is 5</span>
+
+
+<span class="token comment"># &#x5982;&#x679C;&#x662F; list &#x7684;&#x8BDD;&#xFF0C;&#x9700;&#x8981;&#x540C;&#x65F6;&#x8FED;&#x4EE3;&#x7D22;&#x5F15;&#x548C;&#x5143;&#x7D20;&#x672C;&#x8EAB;&#x65F6;</span>
+
+l <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&apos;a&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;b&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;c&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;d&apos;</span><span class="token punctuation">]</span>
+
+<span class="token keyword">for</span> i<span class="token punctuation">,</span> value <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+
+<span class="token comment"># output</span>
+<span class="token comment"># 0 a</span>
+<span class="token comment"># 1 b</span>
+<span class="token comment"># 2 c</span>
+<span class="token comment"># 3 d</span>
+</code></pre>
+<p>&#x5982;&#x4F55;&#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x4E3A;&#x53EF;&#x8FED;&#x4EE3;&#x7684;&#x5BF9;&#x8C61;&#xFF1F;</p>
+<pre class="language-"><code class="lang-python">
+<span class="token keyword">from</span> collections<span class="token punctuation">.</span>abc <span class="token keyword">import</span> Iterable
+
+a <span class="token operator">=</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> Iterable<span class="token punctuation">)</span>  <span class="token comment"># True</span>
+b <span class="token operator">=</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> Iterable<span class="token punctuation">)</span>  <span class="token comment"># True</span>
+c <span class="token operator">=</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span><span class="token string">&apos;abc&apos;</span><span class="token punctuation">,</span> Iterable<span class="token punctuation">)</span>  <span class="token comment"># True</span>
+d <span class="token operator">=</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span><span class="token punctuation">(</span>x <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> Iterable<span class="token punctuation">)</span>  <span class="token comment"># True</span>
+e <span class="token operator">=</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">,</span> Iterable<span class="token punctuation">)</span>  <span class="token comment"># False</span>
+</code></pre>
+<h2 id="&#x5217;&#x8868;&#x751F;&#x6210;&#x5F0F;-&#xFF08;&#x652F;&#x6301;&#xFF1A;&#x5217;&#x8868;&#x3001;&#x5143;&#x7EC4;&#x3001;&#x96C6;&#x5408;&#x3001;&#x5B57;&#x5178;&#xFF09;"><a name="&#x5217;&#x8868;&#x751F;&#x6210;&#x5F0F;-&#xFF08;&#x652F;&#x6301;&#xFF1A;&#x5217;&#x8868;&#x3001;&#x5143;&#x7EC4;&#x3001;&#x96C6;&#x5408;&#x3001;&#x5B57;&#x5178;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x5217;&#x8868;&#x751F;&#x6210;&#x5F0F;-&#xFF08;&#x652F;&#x6301;&#xFF1A;&#x5217;&#x8868;&#x3001;&#x5143;&#x7EC4;&#x3001;&#x96C6;&#x5408;&#x3001;&#x5B57;&#x5178;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://www.liaoxuefeng.com/wiki/1016959663602400/1017317609699776" target="_blank">&#x5217;&#x8868;&#x751F;&#x6210;&#x5F0F;</a> &#xFF08;&#x652F;&#x6301;&#xFF1A;&#x5217;&#x8868;&#x3001;&#x5143;&#x7EC4;&#x3001;&#x96C6;&#x5408;&#x3001;&#x5B57;&#x5178;&#xFF09;</h2>
+<blockquote>
+<p>&#x662F; Python &#x5185;&#x7F6E;&#x7684;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x5374;&#x5F3A;&#x5927;&#x7684;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x521B;&#x5EFA; list &#x7684;&#x751F;&#x6210;&#x5F0F;</p>
+</blockquote>
+<pre class="language-"><code class="lang-python">
+l <span class="token operator">=</span> <span class="token punctuation">[</span>x <span class="token operator">*</span> x <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span>  <span class="token comment"># [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</span>
+
+<span class="token comment"># &#x751F;&#x6210;&#x5168;&#x6392;&#x5217;</span>
+l1 <span class="token operator">=</span> <span class="token punctuation">[</span>m <span class="token operator">+</span> n <span class="token keyword">for</span> m <span class="token keyword">in</span> <span class="token string">&apos;ABC&apos;</span> <span class="token keyword">for</span> n <span class="token keyword">in</span> <span class="token string">&apos;XYZ&apos;</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>l1<span class="token punctuation">)</span>  <span class="token comment"># [&apos;AX&apos;, &apos;AY&apos;, &apos;AZ&apos;, &apos;BX&apos;, &apos;BY&apos;, &apos;BZ&apos;, &apos;CX&apos;, &apos;CY&apos;, &apos;CZ&apos;]</span>
+
+<span class="token comment"># for &#x540E;&#x9762;&#x7684; if &#x662F;&#x8FC7;&#x6EE4;&#x6761;&#x4EF6;&#xFF0C;&#x4E0D;&#x80FD;&#x52A0; else</span>
+l <span class="token operator">=</span> <span class="token punctuation">[</span>x <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">)</span> <span class="token keyword">if</span> x <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span>  <span class="token comment"># [2, 4, 6, 8, 10]</span>
+
+<span class="token comment"># for &#x524D;&#x9762;&#x7684; if else &#x662F;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x5FC5;&#x987B;&#x8981;&#x52A0; else</span>
+l1 <span class="token operator">=</span> <span class="token punctuation">[</span>x <span class="token keyword">if</span> x <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token keyword">else</span> <span class="token operator">-</span>x <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>l1<span class="token punctuation">)</span>  <span class="token comment"># [-1, 2, -3, 4, -5, 6, -7, 8, -9, 10]</span>
+</code></pre>
+<div id="gitalk-container"></div> 
+
+<footer class="footer"><div class="footer__container--normal" alt="
+https://notes.pudongping.comdoc/python-notes/high-features.html
+">
+<a href="../../gif;base64,R0lGODdhqgCqAIAAAAAAAP/ywAAAAAqgCqAAAC/4yPqcvtD6OctNqLs968+w+G4kiW5omm6sq27gvH8kzX9u0C+s7ziJ/QGXq9IcD4OwaECyZQAYzukhCm0amEEreULffwBCu9WKTYrL1mg9NlO2xtxKUMcnEST7ux9vm6LOanBreGtvd3Zwa4ONbokPcASXU4SDapiCh4SKinlsTphikaSlpXGNlIt9nmGZh6GlY5ysfalPkFCThJqxvB67jqJ/yqlXvHKCt3S2Q4uvvaWwUN/IloGnvGVl1cy2zrHR3cDQx++jjdTJnNLVm6rl493O7l7Oo9e2yunKzJT23fRwq2egFNbYMHEJMqCb8MySMHKyCuRNrcFbR1EFs5f/9d9KUrZwxZxYzW3NXDR7DWR48mUZ1jR4yNyEuuHP47SUrksE7veEq7qBMiypxCiQ4NerRo0IsMJSZ9ajQqUqlKq0JlxLSEql7GuOG006orQrAtW9nY+k8syZX01Ikl1HaeyhAgI96rWZGs2XcbAbbl2PLvN5bnBNqluFfhl8QW88WzlDDq43aMm2pc7BayXJ4z8S7sidEzYtAY7lbaKS7cymdsY6rdJ3pg2Qpw39iGSfN0Pq4ladbV9Baz4tLjDLfu53d32t58lQOPqFuP7J9zo0cO28er5Myfr00crixu9fDjBd81LBi7zYazJ98mSjl1zI4wkRcuDlE1/Fvrv+/Fy+bftLUx9x9qNGSDnjqJbeUZqPh1FRljT0nHWGrJLidfdk8hx5L3eEx30hj3bSdd/rxltuGJf3m4XsddeheXzCG9phBIuKDFoITTiTgYOzpJqNtAR622Y1U5ejaMsphOCCNMs1F4Y4s4kiidT45+cx0INqIm4idkRXkggRyCVuFWr4k2l4hMXeggxradFB/FUqYYoRpjqgdnLHxWGBzce44J0JkEnfcNFMVWWNyGOqlokRCQmmhnWv+cqg+kyp5ImRZOoqOkfRd2B6eKjYp149eEmnoOIMKSlun8YECYV6WPopoYM5RVCudvhzWJUlhRqYlgC66FNqX+UVq5GXK/6aaknHkzRhfnVTpqaMGwqqp6bTcLVnse6VCyqSoIFw7onlVURriprGaVuKT0n5arbvyoeYPKGBWiZeN51mILrzp7mnuQ8ko9qt3aO5LqnCofFubo74tlyuoq52KMKBlgsgwfg77afGVFaf4UJS6RtstrD6Cu2d/MxZqL6aovoqsmao+izJ2vE0JGqM3j5aep7sSnN2RSeqM71dBq8yvy68lDKR/OnZYMcws46pkk01fiSbIVY9651raCmzrZVov/V/MtnJGtZxhW5WhY0++tqbHnVrQIMxgG/tnXQvqXTbSRhMqtN1b450vqM6yh+TOnYVLYHAKsjrxfXkW3nTLDf9DR9rCCjf4p9bUTc7YxkAn+jBxnD5qIK0P7tdajDNndXnPL57+r3tXl0xi7GnPyx+Dq1s2NOqwHb75y7RzLh94KIZq8Lbxymwzz8YfT+XtTy/HuKwDax/4rYAF63aPvs68d9Hdbs9a99CGP9735o+PHFrZq8u6OOPr+3qqd7PveWbRLy8pb6muTUVq2e3qJcD+IQkw85PX8yTmv8ZkrXD9WhtQjnWvvtBNgJfy2ptylj8N+u5XGxPPBiUENXztC2yJkh8ILwi0D1mrds4bFunKBSni6cl1LryXCT7TprGxqU/0U1sMV6Q/DravVQCMYOs4Fq540atsUYIhBGf3txH/zi1UxAuZq8zWQiRWD2NFeVgGyTeY6NnOcGAElhiFZrp/rW+FqDIi77CCuTn6R0wXcBb8mEU5NubNKfWjH4uAaMM+agw/ZAqi75pnxiRO5X9EzIDuOgdFJyYvjRSTJNso+S5F/pFsQlzUsPD4rUjiMXtn+hnAaoYlTXqNSqlszgKZBznNyW1/+Iva1vgYnP1JcYA0hOQLBzcrK7WtNjtsFDKHWcFWNi6HpxSe7Lj4TOy9DZko5BUTs8XAbSkzlMLU5g2DFDFpZtKYpLSfrMR2qkB9UFoPVGcz2Ym5Mb0TlvfUFiuTySp7cq1nvjQZAvuHtdn4ko9rPCEV6+hMDfEt/3I+y1j6ZOhOfymOalUsXuksKD06Eo2cS+wlxDBjwIxmMhyMUqboJEgeh160mh9tltJQxsuT9XNyGF3VKmHazJ3xMI/c1ClQY9o1V17veq4Lo3Z+CkqV4u+fIgygGjVJtA/1kJFsZJc8k1ZVMpYwREs92sUQR8iUSo13ujJRWskavJY6Ca0X7OjBgibQ9EWycuYMJHWYuc+wujWhgIMbMREJul3RUWaCNWoogYe8uHGScFddazRzR81KzS6y3nxqGS3WU/V9NnT8a1fqKFo3s/J1q2GtVQoJmsi/Ynamq80sXjGYSNcetnjii6UVK4vbWy7vtQlcJkff+qmhqo21Tv8rrvJuOxSXcqqBaBudFjmE0xaNUYcVXaSpAEfLm1ouu3d9LlO760X0iVV14YzfGwVntGE+0YOAJJlb6UrTlY7WgZiV79o8e0Tq4s5qXFMvQt3o05PWdpCB0mjSGnzFZEE0nQq+Y+8mZt87/Ra0u9vesuyk1whDb6BmS9weOWyyxcqLwDYlmX97S9i2fdSHbmxiBy8WYr59bEvDG+KmRKhjH29zgjnm1o6T21W3YdKY1rGxkgOJyt6dF7xJ1mpJodxcVfaXqB5WooBDDOK5zlahyOribv2burwWmMeNHHPEmqdHclFVYbIN41iDedIpC1LCH76OovxKMzu/Fc9+w+r/kwvF05Aed7NL1LMXKctnjxLLcREObZq1a+imyti34MQlS3ELYEsikbnHk6tJ2WXldWlzSDLtm2hL/bvAKhrDKlx1edpYvoK+94tRRZuJHSk3Iisyytil7Z5X1kliSxmgJB0Xt2pKs08b+JXhxWc4H7te0mLbhLKW3LG3yOA9x/i+x7rqgaHdWq7OEoeL0+V6f+pHELbZqSsOaDVzmuG2itm6OBvkLbvUSnSxUFwPbXWUEShZ91k0lz8+7hSxq2b3UivLMDUscdEa3bMm8cvxXPNlU4LaW+Fskhq3Hq5teeJQO9nKF4euac8m4RlqGr7+lNKWBY7cl5OtnVTm9qcd/y3eWQG22YUUlZoJ7PMtAzPog8VyeXFYRFGjE403rG1ZJXu6KHqXkDOc+gdRPd0aenas3rZ6rJ2tXq/KW5YQNOir88n2KaK90rEmNEjDPVPYrtuOsjVXUF2u57yzt+BstXCAvznSo1ox8CReX5Nvu3g6E8ukCN+iYR+PXwgHmaLmdiXlq2x5uF8289w7aLuwfuWGT/zzOB+SmWG99KSf0cHDBeivJR9kWANd9m4qMa9RjFL2YRSxFIRo1CeKy7u6kJKX47fQ++p2sGMr3vnGHVSxWWxAozmiV+4zpRk6aeFXElvTtz3VCV/2pNpUwJaV44SzZfFy16/P1Wb32WMp+E9d7vbAwg1eop3/aG30UsqWdrfWeel3fXblZ3KnWGZFgHRXQMLzOY0nZBu1VziAgRmogRvIgR3ogR8IgiEogiNIgiVogieIgimogitoggUAADs=" data-lightbox="77092908-a5ef-4e65-8c01-017d563c6c4c" data-title="undefined"><img src="data:image/gif;base64,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" alt="undefined"></a>
+<div class="footer__description--normal"><p class="paragraph footer__author--normal" style="color: #000 !important;">Alex<sup class="super">&#xAE;</sup></p><p class="paragraph footer__quote--normal" style="color: #000 !important;">Artisan, Backend Developer &amp; overall web enthusiast</p><div class="footer__main--normal"><p class="paragraph footer__main__paragraph--normal copyright" style="color: #666 !important;">Copyright &#xA9; Alex all right reserved</p><p class="paragraph footer__main__paragraph--normal footer__modifyTime--normal" style="color: #666 !important;"><span style="color: #666 !important;">modified at:</span>
+2021-06-06 23:42:46
+</p></div></div></div><div class="box__issues">
+
+</div></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="high-func.html" class="navigation navigation-prev " aria-label="Previous page: python 高阶函数">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../git-notes/command.html" class="navigation navigation-next " aria-label="Next page: git 相关命令">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"python 高级特性","level":"2.10","depth":1,"next":{"title":"git 相关命令","level":"3.1","depth":1,"path":"doc/git-notes/command.md","ref":"doc/git-notes/command.md","articles":[]},"previous":{"title":"python 高阶函数","level":"2.9","depth":1,"path":"doc/python-notes/high-func.md","ref":"doc/python-notes/high-func.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","-lunr","-search","search-pro","-sharing","sharing-plus","fontsettings","livereload","expandable-chapters-small","chapter-fold","splitter","hide-element","back-to-top-button","favicon","insert-logo","pageview-count","code","prism","lightbox","github","github-buttons","donate","anchor-navigation-ex","meta","mygitalk","change_girls","simple-mind-map","image-captions","todo","edit-link-plus","sitemap-general","rss","icp","theme-comscore","page-copyright"],"styles":{"website":"https://pudongping.github.io/notes/resources/styles/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"shell":"bash"}},"github":{"url":"https://github.com/pudongping"},"livereload":{},"meta":{"name":"","content":"","data":[{"name":"referrer","content":"never"}]},"todo":{},"splitter":{},"change_girls":{"time":10,"urls":["https://pudongping.github.io/medias/banner/0.jpg","https://pudongping.github.io/medias/banner/1.jpg","https://pudongping.github.io/medias/banner/2.jpg","https://pudongping.github.io/medias/banner/3.jpg","https://pudongping.github.io/medias/banner/4.jpg","https://pudongping.github.io/medias/banner/5.jpg","https://pudongping.github.io/medias/banner/6.jpg","https://pudongping.github.io/medias/banner/7.jpg","https://pudongping.github.io/medias/banner/8.jpg","https://pudongping.github.io/medias/banner/9.jpg","https://pudongping.github.io/medias/banner/10.jpg","https://pudongping.github.io/medias/banner/11.jpg","https://pudongping.github.io/medias/banner/12.jpg"]},"search-pro":{},"page-copyright":{"wisdom":"Artisan, Backend Developer & overall web enthusiast","noPowered":true,"copyright":"Copyright &#169; Alex","styles (normal, symmetrical)":"normal","style":"normal","isShowQRCode":true,"timeColor":"#666","utcOffset":"8","format":"YYYY-MM-dd hh:mm:ss","signature":"Alex","baseUri":"https://notes.pudongping.com","copyrightColor":"#666","description":"modified at:"},"edit-link-plus":{"label":"编辑本页","base":{"pudongping.github.io":"https://github.com/pudongping/notes/edit/main","pudongping.gitee.io":"https://gitee.com/pudongping/notes/edit/main"},"defaultBase":"https://github.com/pudongping/notes/edit/main"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"donate":{"title":"\"若有共鸣，留言足矣，若有赞赏，何以复加？\"","button":"赞赏","wechat":"https://pudongping.github.io/notes/resources/images/wechat.png","alipay":"https://pudongping.github.io/notes/resources/images/alipay.png","wechatText":"微信","alipayText":"支付宝"},"sitemap-general":{"prefix":"https://notes.pudongping.com"},"hide-element":{"elements":["a.gitbook-link[href='https://www.gitbook.com']"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"rss":{"categories":["markdown","git","gitee","github","php","python","vue.js","node.js"],"title":"蒲东平的编程笔记","description":"削个椰子皮_给个梨的笔记","author":"Alex","site_url":"https://notes.pudongping.com","feed_url":"https://notes.pudongping.com/rss","managingEditor":"276558492@qq.com (Alex Pu)","webMaster":"276558492@qq.com (Alex Pu)"},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":false,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":{"shortcut":"./resources/images/favicon.ico","bookmark":"./resources/images/favicon.ico","appleTouch":"./resources/images/favicon.png","appleTouchMore":{"120x120":"./resources/images/apple-touch-icon-120x120.png","180x180":"./resources/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":true},"theme-comscore":{},"icp":{"link":"https://beian.miit.gov.cn/","style":{},"number":"鄂ICP备18004705号-2"},"back-to-top-button":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"pudongping","repo":"notes","type":"star","count":true,"size":"small"}]},"expandable-chapters-small":{},"mygitalk":{"flipMoveOptions":{},"clientID":"8f9c9e11f169577a768b","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["pudongping"],"createIssueManually":false,"distractionFreeMode":false,"repo":"notes","owner":"pudongping","enableHotKey":true,"clientSecret":"507d601f0b338c9908dfeb7f198b89514345748e","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"qq":true,"all":["douban","facebook","google","hatenaBookmark","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"simple-mind-map":{"type":"markdown","preset":"colorful","linkShape":"diagonal","autoFit":true,"style":{}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"url":"https://pudongping.github.io/notes/resources/images/favicon.png","style":"background: none; max-height: 30px; min-height: 30px"},"image-captions":{"caption":"_PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_ - sugaryesp 的笔记","variable_name":"_pictures"}},"theme":"default","author":"Alex","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"蒲东平的编程笔记","language":"zh-hans","links":{"sidebar":{"My Blog":"https://pudongping.github.io","My Notes":"https://pudongping.github.io/notes","My GitHub":"https://github.com/pudongping","My Gitee":"https://gitee.com/pudongping"}},"gitbook":"3.2.3","description":"live and learn"},"file":{"path":"doc/python-notes/high-features.md","mtime":"2021-06-06T15:42:46.213Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-08T03:59:21.449Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+        
+    
+        
+        <script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mygitalk/mygitalk.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-change_girls/girls.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-simple-mind-map/bundle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link-plus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

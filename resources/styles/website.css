@@ -1,0 +1,9 @@
+/* 左侧主章节名称不转换成大写 */
+.book-summary ul.summary li.header {
+    text-transform: none;
+}
+
+/* 赞赏按钮和赞赏文字之间的距离 */
+.gitbook-donate button#rewardButton {
+    margin-top: 18px;
+}

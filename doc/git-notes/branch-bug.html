@@ -1,0 +1,777 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>git bug 分支 · 蒲东平的编程笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Alex">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-change_girls/girls.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-copyright/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta  name="referrer"  content="never" >
+    
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="tags.html" />
+    
+    
+    <link rel="prev" href="command.html" />
+    
+
+    <link href="https://notes.pudongping.com/rss" title="蒲东平的编程笔记" rel="alternate" type="application/rss+xml" />
+
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"pudongping","repo":"notes","type":"star","count":true,"size":"small"}]};
+    </script>
+
+    
+        <link rel="shortcut icon" href='../../resources/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../resources/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../resources/images/favicon.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../resources/images/apple-touch-icon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../resources/images/apple-touch-icon-180x180.png">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://pudongping.github.io" target="_blank" class="custom-link">My Blog</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://pudongping.github.io/notes" target="_blank" class="custom-link">My Notes</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://github.com/pudongping" target="_blank" class="custom-link">My GitHub</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://gitee.com/pudongping" target="_blank" class="custom-link">My Gitee</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Python 系列</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../python-notes/basic-grammar.html">
+            
+                <a href="../python-notes/basic-grammar.html">
+            
+                    
+                    python 基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../python-notes/data-type.html">
+            
+                <a href="../python-notes/data-type.html">
+            
+                    
+                    python 的基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../python-notes/type.html">
+            
+                <a href="../python-notes/type.html">
+            
+                    
+                    python 类型判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../python-notes/handle-err.html">
+            
+                <a href="../python-notes/handle-err.html">
+            
+                    
+                    python 错误、异常处理、记录日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../python-notes/io.html">
+            
+                <a href="../python-notes/io.html">
+            
+                    
+                    python IO 编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../python-notes/func.html">
+            
+                <a href="../python-notes/func.html">
+            
+                    
+                    python 函数以及传参
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../python-notes/module.html">
+            
+                <a href="../python-notes/module.html">
+            
+                    
+                    python 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../python-notes/class.html">
+            
+                <a href="../python-notes/class.html">
+            
+                    
+                    python 类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../python-notes/high-func.html">
+            
+                <a href="../python-notes/high-func.html">
+            
+                    
+                    python 高阶函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="../python-notes/high-features.html">
+            
+                <a href="../python-notes/high-features.html">
+            
+                    
+                    python 高级特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Git 系列</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="command.html">
+            
+                <a href="command.html">
+            
+                    
+                    git 相关命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2" data-path="branch-bug.html">
+            
+                <a href="branch-bug.html">
+            
+                    
+                    git bug 分支
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="tags.html">
+            
+                <a href="tags.html">
+            
+                    
+                    git 标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Docker 系列</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../docker-notes/command.html">
+            
+                <a href="../docker-notes/command.html">
+            
+                    
+                    docker 常见命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../docker-notes/about-laradock.html">
+            
+                <a href="../docker-notes/about-laradock.html">
+            
+                    
+                    laradock 笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">JavaScript 系列</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../javascript-notes/basic-grammar.html">
+            
+                <a href="../javascript-notes/basic-grammar.html">
+            
+                    
+                    JavaScript 基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+
+    
+    <li>
+        
+        
+        
+            
+        
+        
+            <a href="https://beian.miit.gov.cn/" target="blank" class="gitbook-link">
+                鄂ICP备18004705号-2
+            </a>
+        
+    </li>
+    
+</ul>
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >git bug 分支</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#bug-&#x5206;&#x652F;"><b></b>bug &#x5206;&#x652F;</a></li></ul></div><h1 id="bug-&#x5206;&#x652F;"><a name="bug-&#x5206;&#x652F;" class="anchor-navigation-ex-anchor" href="#bug-&#x5206;&#x652F;"><i class="fa fa-link" aria-hidden="true"></i></a>bug &#x5206;&#x652F;</h1>
+<blockquote>
+<p>&#x4FEE;&#x590D; bug &#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x901A;&#x8FC7;&#x521B;&#x5EFA;&#x65B0;&#x7684; bug &#x5206;&#x652F;&#x8FDB;&#x884C;&#x4FEE;&#x590D;&#xFF0C;&#x7136;&#x540E;&#x5408;&#x5E76;&#xFF0C;&#x6700;&#x540E;&#x5220;&#x9664;&#xFF1B;<br>&#x5F53;&#x624B;&#x5934;&#x5DE5;&#x4F5C;&#x6CA1;&#x6709;&#x5B8C;&#x6210;&#x65F6;&#xFF0C;&#x5148;&#x628A;&#x5DE5;&#x4F5C;&#x73B0;&#x573A; git stash &#x4E00;&#x4E0B;&#xFF0C;&#x7136;&#x540E;&#x53BB;&#x4FEE;&#x590D; bug&#xFF0C;&#x4FEE;&#x590D;&#x540E;&#xFF0C;&#x518D; git stash pop&#xFF0C;&#x56DE;&#x5230;&#x5DE5;&#x4F5C;&#x73B0;&#x573A;&#xFF1B;<br>&#x5728; master &#x5206;&#x652F;&#x4E0A;&#x4FEE;&#x590D;&#x7684; bug&#xFF0C;&#x60F3;&#x8981;&#x5408;&#x5E76;&#x5230;&#x5F53;&#x524D; dev &#x5206;&#x652F;&#xFF0C;&#x53EF;&#x4EE5;&#x7528; git cherry-pick <commit id=""> &#x547D;&#x4EE4;&#xFF0C;&#x628A; bug &#x63D0;&#x4EA4;&#x7684;&#x4FEE;&#x6539;&#x201C;&#x590D;&#x5236;&#x201D;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;&#xFF0C;&#x907F;&#x514D;&#x91CD;&#x590D;&#x52B3;&#x52A8;&#x3002;</commit></p>
+</blockquote>
+<p>&#x5E94;&#x7528;&#x573A;&#x666F;&#x5982;&#x4E0B;&#xFF1A;<br>&#x5F53;&#x4F60;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x4E00;&#x4E2A; bug&#xFF0C;&#x4F46;&#x662F;&#x4F60;&#x5F53;&#x524D;&#x7684;&#x5F00;&#x53D1;&#x529F;&#x80FD;&#x8FD8;&#x4E0D;&#x60F3;&#x63D0;&#x4EA4;&#x5230;&#x8FDC;&#x7A0B;&#x7248;&#x672C;&#x5E93;&#x4E2D;&#xFF0C;&#x53C8;&#x5FC5;&#x987B;&#x8981;&#x5148;&#x5C06; bug &#x63D0;&#x4EA4;&#x3002;</p>
+<ul>
+<li>&#x67E5;&#x770B;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x533A;&#x7684;&#x72B6;&#x6001;&#xFF08;&#x5047;&#x8BBE;&#x5F53;&#x524D;&#x5728; <code>dev</code> &#x5206;&#x652F;&#xFF09;</li>
+</ul>
+<pre class="language-"><code class="lang-git">
+// &#x5DE5;&#x4F5C;&#x533A;&#x7684;&#x6587;&#x4EF6;&#x8FD8;&#x6CA1;&#x6709;&#x63D0;&#x4EA4;
+git status
+</code></pre>
+<ul>
+<li>&#x5B58;&#x50A8;&#x5F53;&#x524D;&#x7684;&#x5DE5;&#x4F5C;&#x73B0;&#x573A;</li>
+</ul>
+<pre class="language-"><code class="lang-git">
+git stash
+</code></pre>
+<ul>
+<li>&#x518D;&#x6B21;&#x67E5;&#x770B;&#x5DE5;&#x4F5C;&#x533A;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x5E94;&#x8BE5;&#x662F;&#x5E72;&#x51C0;&#x7684;</li>
+<li>&#x5982;&#x679C;&#x9700;&#x8981;&#x5728; <code>master</code> &#x5206;&#x652F;&#x4E0A;&#x4FEE;&#x590D; bug&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x9700;&#x8981;&#x4ECE; <code>master</code> &#x5206;&#x652F;&#x4E0A;&#x521B;&#x5EFA;&#x4E34;&#x65F6;&#x5206;&#x652F;</li>
+</ul>
+<pre class="language-"><code class="lang-git">
+// &#x5207;&#x6362;&#x5230; master &#x5206;&#x652F;
+git checkout master
+
+// &#x521B;&#x5EFA;&#x4FEE;&#x590D; bug &#x7684;&#x5206;&#x652F;&#x4E3A; issue-1
+git checkout -b issue-1
+</code></pre>
+<ul>
+<li>&#x5728; <code>issue-1</code> &#x5206;&#x652F;&#x4E0A;&#x4FEE;&#x590D; bug</li>
+<li>&#x5728; <code>issue-1</code> &#x5206;&#x652F;&#x4E0A;&#x63D0;&#x4EA4;&#x4EE3;&#x7801;</li>
+</ul>
+<pre class="language-"><code class="lang-git">
+git add -A &amp;&amp; git commit -m <span class="token string">&apos;fixed bug 1&apos;</span>
+</code></pre>
+<ul>
+<li>&#x5207;&#x6362;&#x5230; <code>master</code> &#x5206;&#x652F;</li>
+</ul>
+<pre class="language-"><code class="lang-git">
+git switch master
+</code></pre>
+<ul>
+<li>&#x4ECE; <code>master</code> &#x5206;&#x652F;&#x4E0A;&#x5408;&#x5E76; <code>issue-1</code> &#x5206;&#x652F;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5E76;&#x6DFB;&#x52A0;&#x4E86;&#x5408;&#x5E76;&#x4FE1;&#x606F;</li>
+</ul>
+<pre class="language-"><code class="lang-git">
+git merge --no-ff -m <span class="token string">&quot;merged bug fix 1&quot;</span> issue-1
+</code></pre>
+<ul>
+<li>&#x539F;&#x6765;&#x662F;&#x5728; <code>dev</code> &#x5206;&#x652F;&#x4E0A;&#x5E72;&#x6D3B;&#xFF0C;&#x73B0;&#x5728;&#x5207;&#x6362;&#x5230; <code>dev</code> &#x5206;&#x652F;&#x4E0A;&#x7EE7;&#x7EED;&#x5E72;&#x6D3B;</li>
+</ul>
+<pre class="language-"><code class="lang-git">
+git checkout dev
+
+// &#x5982;&#x679C;&#x6B64;&#x65F6;&#x7528; git status &#x547D;&#x4EE4;&#x67E5;&#x770B;&#x7684;&#x8BDD;&#xFF0C;&#x6B64;&#x65F6;&#x7684;&#x5DE5;&#x4F5C;&#x533A;&#x662F;&#x5E72;&#x51C0;&#x7684;
+</code></pre>
+<ul>
+<li>&#x67E5;&#x770B;&#x4E4B;&#x524D;&#x4E34;&#x65F6;&#x5B58;&#x50A8;&#x7684;&#x5DE5;&#x4F5C;&#x73B0;&#x573A;</li>
+</ul>
+<pre class="language-"><code class="lang-git">
+git stash list
+</code></pre>
+<ul>
+<li>&#x6062;&#x590D;&#x5DE5;&#x4F5C;&#x73B0;&#x573A;&#xFF08;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#xFF09;</li>
+</ul>
+<pre class="language-"><code class="lang-git">
+// &#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#xFF1A;
+// &#x6062;&#x590D;&#x5DE5;&#x4F5C;&#x73B0;&#x573A;
+git stash apply
+// &#x5220;&#x9664;&#x4E4B;&#x524D;&#x4E34;&#x65F6;&#x5B58;&#x50A8;&#x7684;&#x5DE5;&#x4F5C;&#x73B0;&#x573A;
+git stash drop
+
+// &#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x6CD5;&#xFF1A;
+// &#x6062;&#x590D;&#x7684;&#x540C;&#x65F6;&#x628A; stash &#x5185;&#x5BB9;&#x4E5F;&#x5220;&#x4E86;
+git stash pop
+</code></pre>
+<ul>
+<li>&#x5982;&#x679C;&#x9700;&#x8981;&#x6062;&#x590D;&#x6307;&#x5B9A;&#x7684;&#x5DE5;&#x4F5C;&#x73B0;&#x573A;</li>
+</ul>
+<pre class="language-"><code class="lang-git">
+// &#x67E5;&#x770B;&#x6240;&#x6709;&#x7684;&#x5DE5;&#x4F5C;&#x73B0;&#x573A;
+git stash list
+
+// &#x6062;&#x590D;&#x540D;&#x79F0;&#x4E3A; &#x300C;stash@{0}&#x300D; &#x7684;&#x5DE5;&#x4F5C;&#x73B0;&#x573A;
+git stash apply stash@{0}
+</code></pre>
+<ul>
+<li>&#x5C06;&#x4FEE;&#x590D;&#x597D;&#x7684; bug &#x540C;&#x6B65;&#x5230;&#x5176;&#x4ED6;&#x7684;&#x5206;&#x652F;</li>
+</ul>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x76F4;&#x63A5;&#x5C06;&#x4FEE;&#x590D; bug &#x7684;&#x6587;&#x4EF6;&#x4FEE;&#x6539;&#x5185;&#x5BB9;&#x590D;&#x5236;&#x5230;&#x5176;&#x4ED6;&#x5206;&#x652F;&#xFF0C;&#x6BD4;&#x5982;&#x5728; <code>issue-1</code> &#x5206;&#x652F;&#x4E0A;&#x4FEE;&#x590D;&#x7684;&#x63D0;&#x4EA4;&#x7248;&#x672C;&#x53F7;&#x4E3A; <code>c55ae16d5b1a</code>&#xFF0C;&#x73B0;&#x5728;&#x53EA;&#x9700;&#x8981;&#x5C06;&#x8FD9;&#x4E2A;&#x7248;&#x672C;&#x53F7;&#x7684;&#x6240;&#x6709;&#x4FEE;&#x6539;&#x5185;&#x5BB9;&#x590D;&#x5236;&#x5230; dev &#x5206;&#x652F;&#x4E0A;&#x5373;&#x53EF;&#x3002;</p>
+</blockquote>
+<pre class="language-"><code class="lang-git">
+// &#x5F53;&#x524D;&#x5206;&#x652F;&#x4E3A; dev
+git checkout dev
+
+// &#x590D;&#x5236;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x63D0;&#x4EA4;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;&#xFF08;&#x6B64;&#x64CD;&#x4F5C;&#x4F1A;&#x81EA;&#x52A8;&#x63D0;&#x4EA4;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x53F7;&#xFF09;
+git cherry-pick c55ae16d5b1a
+</code></pre>
+<div id="gitalk-container"></div> 
+
+<footer class="footer"><div class="footer__container--normal" alt="
+https://notes.pudongping.comdoc/git-notes/branch-bug.html
+">
+<a href="../../gif;base64,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" data-lightbox="61593ed3-db5f-4666-a5db-696efcf7e489" data-title="undefined"><img src="data:image/gif;base64,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" alt="undefined"></a>
+<div class="footer__description--normal"><p class="paragraph footer__author--normal" style="color: #000 !important;">Alex<sup class="super">&#xAE;</sup></p><p class="paragraph footer__quote--normal" style="color: #000 !important;">Artisan, Backend Developer &amp; overall web enthusiast</p><div class="footer__main--normal"><p class="paragraph footer__main__paragraph--normal copyright" style="color: #666 !important;">Copyright &#xA9; Alex all right reserved</p><p class="paragraph footer__main__paragraph--normal footer__modifyTime--normal" style="color: #666 !important;"><span style="color: #666 !important;">modified at:</span>
+2021-06-07 08:51:22
+</p></div></div></div><div class="box__issues">
+
+</div></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="command.html" class="navigation navigation-prev " aria-label="Previous page: git 相关命令">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="tags.html" class="navigation navigation-next " aria-label="Next page: git 标签">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"git bug 分支","level":"3.2","depth":1,"next":{"title":"git 标签","level":"3.3","depth":1,"path":"doc/git-notes/tags.md","ref":"doc/git-notes/tags.md","articles":[]},"previous":{"title":"git 相关命令","level":"3.1","depth":1,"path":"doc/git-notes/command.md","ref":"doc/git-notes/command.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","-lunr","-search","search-pro","-sharing","sharing-plus","fontsettings","livereload","expandable-chapters-small","chapter-fold","splitter","hide-element","back-to-top-button","favicon","insert-logo","pageview-count","code","prism","lightbox","github","github-buttons","donate","anchor-navigation-ex","meta","mygitalk","change_girls","simple-mind-map","image-captions","todo","edit-link-plus","sitemap-general","rss","icp","theme-comscore","page-copyright"],"styles":{"website":"https://pudongping.github.io/notes/resources/styles/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"shell":"bash"}},"github":{"url":"https://github.com/pudongping"},"livereload":{},"meta":{"name":"","content":"","data":[{"name":"referrer","content":"never"}]},"todo":{},"splitter":{},"change_girls":{"time":10,"urls":["https://pudongping.github.io/medias/banner/0.jpg","https://pudongping.github.io/medias/banner/1.jpg","https://pudongping.github.io/medias/banner/2.jpg","https://pudongping.github.io/medias/banner/3.jpg","https://pudongping.github.io/medias/banner/4.jpg","https://pudongping.github.io/medias/banner/5.jpg","https://pudongping.github.io/medias/banner/6.jpg","https://pudongping.github.io/medias/banner/7.jpg","https://pudongping.github.io/medias/banner/8.jpg","https://pudongping.github.io/medias/banner/9.jpg","https://pudongping.github.io/medias/banner/10.jpg","https://pudongping.github.io/medias/banner/11.jpg","https://pudongping.github.io/medias/banner/12.jpg"]},"search-pro":{},"page-copyright":{"wisdom":"Artisan, Backend Developer & overall web enthusiast","noPowered":true,"copyright":"Copyright &#169; Alex","styles (normal, symmetrical)":"normal","style":"normal","isShowQRCode":true,"timeColor":"#666","utcOffset":"8","format":"YYYY-MM-dd hh:mm:ss","signature":"Alex","baseUri":"https://notes.pudongping.com","copyrightColor":"#666","description":"modified at:"},"edit-link-plus":{"label":"编辑本页","base":{"pudongping.github.io":"https://github.com/pudongping/notes/edit/main","pudongping.gitee.io":"https://gitee.com/pudongping/notes/edit/main"},"defaultBase":"https://github.com/pudongping/notes/edit/main"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"donate":{"title":"\"若有共鸣，留言足矣，若有赞赏，何以复加？\"","button":"赞赏","wechat":"https://pudongping.github.io/notes/resources/images/wechat.png","alipay":"https://pudongping.github.io/notes/resources/images/alipay.png","wechatText":"微信","alipayText":"支付宝"},"sitemap-general":{"prefix":"https://notes.pudongping.com"},"hide-element":{"elements":["a.gitbook-link[href='https://www.gitbook.com']"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"rss":{"categories":["markdown","git","gitee","github","php","python","vue.js","node.js"],"title":"蒲东平的编程笔记","description":"削个椰子皮_给个梨的笔记","author":"Alex","site_url":"https://notes.pudongping.com","feed_url":"https://notes.pudongping.com/rss","managingEditor":"276558492@qq.com (Alex Pu)","webMaster":"276558492@qq.com (Alex Pu)"},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":false,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":{"shortcut":"./resources/images/favicon.ico","bookmark":"./resources/images/favicon.ico","appleTouch":"./resources/images/favicon.png","appleTouchMore":{"120x120":"./resources/images/apple-touch-icon-120x120.png","180x180":"./resources/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":true},"theme-comscore":{},"icp":{"link":"https://beian.miit.gov.cn/","style":{},"number":"鄂ICP备18004705号-2"},"back-to-top-button":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"pudongping","repo":"notes","type":"star","count":true,"size":"small"}]},"expandable-chapters-small":{},"mygitalk":{"flipMoveOptions":{},"clientID":"8f9c9e11f169577a768b","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["pudongping"],"createIssueManually":false,"distractionFreeMode":false,"repo":"notes","owner":"pudongping","enableHotKey":true,"clientSecret":"507d601f0b338c9908dfeb7f198b89514345748e","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"qq":true,"all":["douban","facebook","google","hatenaBookmark","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"simple-mind-map":{"type":"markdown","preset":"colorful","linkShape":"diagonal","autoFit":true,"style":{}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"url":"https://pudongping.github.io/notes/resources/images/favicon.png","style":"background: none; max-height: 30px; min-height: 30px"},"image-captions":{"caption":"_PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_ - sugaryesp 的笔记","variable_name":"_pictures"}},"theme":"default","author":"Alex","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"蒲东平的编程笔记","language":"zh-hans","links":{"sidebar":{"My Blog":"https://pudongping.github.io","My Notes":"https://pudongping.github.io/notes","My GitHub":"https://github.com/pudongping","My Gitee":"https://gitee.com/pudongping"}},"gitbook":"3.2.3","description":"live and learn"},"file":{"path":"doc/git-notes/branch-bug.md","mtime":"2021-06-07T00:51:22.988Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-08T03:59:21.449Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+        
+    
+        
+        <script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mygitalk/mygitalk.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-change_girls/girls.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-simple-mind-map/bundle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link-plus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

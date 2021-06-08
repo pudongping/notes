@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[蒲东平的编程笔记]]></title>
+        <description><![CDATA[削个椰子皮_给个梨的笔记]]></description>
+        <link>https://notes.pudongping.com</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Tue, 08 Jun 2021 03:59:25 GMT</lastBuildDate>
+        <atom:link href="https://notes.pudongping.com/rss" rel="self" type="application/rss+xml"/>
+        <author><![CDATA[Alex]]></author>
+        <managingEditor><![CDATA[276558492@qq.com (Alex Pu)]]></managingEditor>
+        <webMaster><![CDATA[276558492@qq.com (Alex Pu)]]></webMaster>
+        <category><![CDATA[markdown]]></category>
+        <category><![CDATA[git]]></category>
+        <category><![CDATA[gitee]]></category>
+        <category><![CDATA[github]]></category>
+        <category><![CDATA[php]]></category>
+        <category><![CDATA[python]]></category>
+        <category><![CDATA[vue.js]]></category>
+        <category><![CDATA[node.js]]></category>
+        <item>
+            <title><![CDATA[索引]]></title>
+            <description><![CDATA[这里只会记录本人的学习笔记，若需要访问本人博客，请 点我 进行访问。]]></description>
+            <link>https://notes.pudongping.comINTRODUCTION.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comINTRODUCTION.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[python 基础语法]]></title>
+            <description><![CDATA[<extoc></extoc>]]></description>
+            <link>https://notes.pudongping.comdoc/python-notes/basic-grammar.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comdoc/python-notes/basic-grammar.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[list 是一种有序的集合，可以随时添加和删除其中的元素。]]></description>
+            <link>https://notes.pudongping.comdoc/python-notes/data-type.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comdoc/python-notes/data-type.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[python 类型判断]]></title>
+            <link>https://notes.pudongping.comdoc/python-notes/type.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comdoc/python-notes/type.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[python 错误、异常处理、记录日志]]></title>
+            <link>https://notes.pudongping.comdoc/python-notes/handle-err.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comdoc/python-notes/handle-err.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[python IO 编程]]></title>
+            <link>https://notes.pudongping.comdoc/python-notes/io.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comdoc/python-notes/io.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[python 函数以及传参]]></title>
+            <description><![CDATA[对于任意函数，都可以使用 func(*args, **kw) 的形式调用]]></description>
+            <link>https://notes.pudongping.comdoc/python-notes/func.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comdoc/python-notes/func.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[python 模块]]></title>
+            <description><![CDATA[模块名不要和系统模块名冲突，最好先查看系统是否已存在该模块，检查方法是在 Python 交互环境执行 import abc ，若成功则说明系统存在此模块]]></description>
+            <link>https://notes.pudongping.comdoc/python-notes/module.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comdoc/python-notes/module.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[python 类与对象]]></title>
+            <description><![CDATA[类的私有变量 private 通过给属性的名称前加上两个下划线 __ 实现。这样的变量外部实例是无法访问的，因为实质性是把改属性的名称改成了 _类名__属性名]]></description>
+            <link>https://notes.pudongping.comdoc/python-notes/class.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comdoc/python-notes/class.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[python 高阶函数]]></title>
+            <description><![CDATA[自己实现字符串转整型的方法]]></description>
+            <link>https://notes.pudongping.comdoc/python-notes/high-func.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comdoc/python-notes/high-func.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[python 高级特性]]></title>
+            <description><![CDATA[如何判断一个对象是否为可迭代的对象？]]></description>
+            <link>https://notes.pudongping.comdoc/python-notes/high-features.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comdoc/python-notes/high-features.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[git 相关命令]]></title>
+            <description><![CDATA[命令 | 说明
+--- | ---
+git add . | 提交所有修改的和新建的数据暂存区 (提交当前文件夹下所有修改)
+git add -u | 提交所有被删除和修改的文件到数据暂存区（等同于git add -update）
+git add -A | 提交所有被删除、被替换、被修改和新增的文件到数据暂存区（等同于git add –all）]]></description>
+            <link>https://notes.pudongping.comdoc/git-notes/command.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comdoc/git-notes/command.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[bug 分支]]></title>
+            <description><![CDATA[应用场景如下：
+当你需要修改一个 bug，但是你当前的开发功能还不想提交到远程版本库中，又必须要先将 bug 提交。]]></description>
+            <link>https://notes.pudongping.comdoc/git-notes/branch-bug.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comdoc/git-notes/branch-bug.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Git 标签]]></title>
+            <description><![CDATA[标签总是和某个 commit 挂钩。如果这个 commit 既出现在 master 分支，又出现在 dev 分支，那么在这两个分支上都可以看到这个标签。]]></description>
+            <link>https://notes.pudongping.comdoc/git-notes/tags.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comdoc/git-notes/tags.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[docker 常见命令]]></title>
+            <description><![CDATA[镜像仓库地址：https://hub.docker.com]]></description>
+            <link>https://notes.pudongping.comdoc/docker-notes/command.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comdoc/docker-notes/command.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[laradock 笔记]]></title>
+            <description><![CDATA[然后在 .env 中修改镜像构建过程中 Linux 软件源为国内镜像以免镜像构建过程中出现网络超时问题：]]></description>
+            <link>https://notes.pudongping.comdoc/docker-notes/about-laradock.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comdoc/docker-notes/about-laradock.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[JavaScript 基础语法]]></title>
+            <description><![CDATA[在 JavaScript 代码的第一行写上]]></description>
+            <link>https://notes.pudongping.comdoc/javascript-notes/basic-grammar.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comdoc/javascript-notes/basic-grammar.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+    </channel>
+</rss>
