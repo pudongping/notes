@@ -36,3 +36,4 @@
 ### JavaScript 系列
 
 - [JavaScript 基础语法](doc/javascript-notes/basic-grammar.md)
+- [JavaScript 基本数据类型](doc/javascript-notes/data-type.md)
