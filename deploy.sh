@@ -50,9 +50,10 @@ fi
 blue 'Deploy starting ......'
 
 # 生成静态文件
-orangered 'generate static files'
+orangered 'Generate static files'
 gitbook build .
 
+# 如果不存在发布目录
 if [ ! -d ./$temp_deploy ]
 then
   # 第一次执行部署命令时
@@ -83,6 +84,6 @@ git checkout -b $my_branch
 orangered "execute command  ===> git push -f -u origin ${my_branch}"
 git push -f -u origin $my_branch
 
-green "Congratulations ! The end !"
+green "Congratulations, deploy successful! The end !"
 
 exit 0
