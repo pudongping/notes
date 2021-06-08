@@ -42,3 +42,7 @@
 
 - [docker 常见命令](doc/docker-notes/command.md)
 - [laradock 笔记](doc/docker-notes/about-laradock.md)
+
+### JavaScript 系列
+
+- [JavaScript 基础语法](doc/javascript-notes/basic-grammar.md)
