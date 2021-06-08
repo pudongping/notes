@@ -20,3 +20,4 @@ _book
 .vscode
 .DS_Store
 my_server_deploy.sh
+.deploy_git
