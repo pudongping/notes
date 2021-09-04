@@ -1,0 +1,740 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>JavaScript 操作文件 · 蒲东平的编程笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Alex">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-copyright/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta  name="referrer"  content="never" >
+    
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="data-type.html" />
+    
+
+    <link href="https://notes.pudongping.com/rss" title="蒲东平的编程笔记" rel="alternate" type="application/rss+xml" />
+
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"pudongping","repo":"notes","type":"star","count":true,"size":"small"}]};
+    </script>
+
+    
+        <link rel="shortcut icon" href='../../resources/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../resources/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../resources/images/favicon.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../resources/images/apple-touch-icon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../resources/images/apple-touch-icon-180x180.png">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://pudongping.github.io" target="_blank" class="custom-link">My Blog</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://pudongping.github.io/notes" target="_blank" class="custom-link">My Notes</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://github.com/pudongping" target="_blank" class="custom-link">My GitHub</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://gitee.com/pudongping" target="_blank" class="custom-link">My Gitee</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Python 系列</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../python-notes/basic-grammar.html">
+            
+                <a href="../python-notes/basic-grammar.html">
+            
+                    
+                    python 基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../python-notes/data-type.html">
+            
+                <a href="../python-notes/data-type.html">
+            
+                    
+                    python 的基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../python-notes/type.html">
+            
+                <a href="../python-notes/type.html">
+            
+                    
+                    python 类型判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../python-notes/handle-err.html">
+            
+                <a href="../python-notes/handle-err.html">
+            
+                    
+                    python 错误、异常处理、记录日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../python-notes/io.html">
+            
+                <a href="../python-notes/io.html">
+            
+                    
+                    python IO 编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../python-notes/func.html">
+            
+                <a href="../python-notes/func.html">
+            
+                    
+                    python 函数以及传参
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../python-notes/module.html">
+            
+                <a href="../python-notes/module.html">
+            
+                    
+                    python 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../python-notes/class.html">
+            
+                <a href="../python-notes/class.html">
+            
+                    
+                    python 类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../python-notes/high-func.html">
+            
+                <a href="../python-notes/high-func.html">
+            
+                    
+                    python 高阶函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="../python-notes/high-features.html">
+            
+                <a href="../python-notes/high-features.html">
+            
+                    
+                    python 高级特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Git 系列</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../git-notes/command.html">
+            
+                <a href="../git-notes/command.html">
+            
+                    
+                    git 相关命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../git-notes/branch-bug.html">
+            
+                <a href="../git-notes/branch-bug.html">
+            
+                    
+                    git bug 分支
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../git-notes/tags.html">
+            
+                <a href="../git-notes/tags.html">
+            
+                    
+                    git 标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Docker 系列</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../docker-notes/command.html">
+            
+                <a href="../docker-notes/command.html">
+            
+                    
+                    docker 常见命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../docker-notes/about-laradock.html">
+            
+                <a href="../docker-notes/about-laradock.html">
+            
+                    
+                    laradock 笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">JavaScript 系列</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="basic-grammar.html">
+            
+                <a href="basic-grammar.html">
+            
+                    
+                    JavaScript 基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="data-type.html">
+            
+                <a href="data-type.html">
+            
+                    
+                    JavaScript 基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.3" data-path="operation-file.html">
+            
+                <a href="operation-file.html">
+            
+                    
+                    JavaScript 操作文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+
+    
+    <li>
+        
+        
+        
+            
+        
+        
+            <a href="https://beian.miit.gov.cn/" target="blank" class="gitbook-link">
+                鄂ICP备18004705号-2
+            </a>
+        
+    </li>
+    
+</ul>
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >JavaScript 操作文件</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#javascript-&#x64CD;&#x4F5C;&#x6587;&#x4EF6;"><b></b>JavaScript &#x64CD;&#x4F5C;&#x6587;&#x4EF6;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6848;&#x4F8B;"><b></b>&#x6848;&#x4F8B;</a></li></ul></ul></div><h1 id="javascript-&#x64CD;&#x4F5C;&#x6587;&#x4EF6;"><a name="javascript-&#x64CD;&#x4F5C;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#javascript-&#x64CD;&#x4F5C;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>JavaScript &#x64CD;&#x4F5C;&#x6587;&#x4EF6;</h1>
+<p>&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x7684;&#x63A7;&#x4EF6;&#x4E3A; <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>file<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span></code> &#x5F53;&#x4E00;&#x4E2A;&#x8868;&#x5355;&#x5305;&#x542B;&#x6B64;&#x63A7;&#x4EF6;&#x65F6;&#xFF0C;&#x8868;&#x5355;&#x7684; <code>enctype</code> &#x5FC5;&#x987B;&#x6307;&#x5B9A;&#x4E3A; <code>multipart/form-data</code> &#xFF0C; <code>method</code> &#x5FC5;&#x987B;&#x6307;&#x5B9A;&#x4E3A; <code>post</code> &#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x624D;&#x80FD;&#x53D1;&#x9001;&#x8868;&#x5355;&#x6570;&#x636E;&#xFF0C;&#x51FA;&#x4E8E;&#x5B89;&#x5168;&#x8003;&#x8651;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x53EA;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x70B9;&#x51FB; <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>file<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span></code> &#x6765;&#x9009;&#x62E9;&#x672C;&#x5730;&#x6587;&#x4EF6;&#xFF0C;&#x7528; JavaScript &#x5BF9; <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>file<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span></code> &#x7684; <code>value</code> &#x8D4B;&#x503C;&#x662F;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x6548;&#x679C;&#x7684;&#x3002;</p>
+<h2 id="&#x6848;&#x4F8B;"><a name="&#x6848;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x6848;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6848;&#x4F8B;</h2>
+<p>&#x8BFB;&#x53D6;&#x7528;&#x6237;&#x9009;&#x62E9;&#x7684;&#x56FE;&#x7247;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x5728;&#x4E00;&#x4E2A; div &#x4E2D;&#x9884;&#x89C8;&#x56FE;&#x50CF;</p>
+<pre class="language-"><code class="lang-html">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>post<span class="token punctuation">&quot;</span></span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>http://localhost/test<span class="token punctuation">&quot;</span></span> <span class="token attr-name">enctype</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>multipart/form-data<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>test-image-preview<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>file<span class="token punctuation">&quot;</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>test-image-file<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>test<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>test-file-info<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span>
+
+    let
+        fileInput = document.getElementById(&apos;test-image-file&apos;),
+        info = document.getElementById(&apos;test-file-info&apos;),
+        preview = document.getElementById(&apos;test-image-preview&apos;);
+
+    // &#x76D1;&#x542C;change&#x4E8B;&#x4EF6;:
+    fileInput.addEventListener(&apos;change&apos;, function () {
+        // &#x6E05;&#x9664;&#x80CC;&#x666F;&#x56FE;&#x7247;:
+        preview.style.backgroundImage = &apos;&apos;;
+        // &#x68C0;&#x67E5;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x9009;&#x62E9;:
+        if (!fileInput.value) {
+            info.innerHTML = &apos;&#x6CA1;&#x6709;&#x9009;&#x62E9;&#x6587;&#x4EF6;&apos;;
+            return;
+        }
+        // &#x83B7;&#x53D6;File&#x5F15;&#x7528;:
+        var file = fileInput.files[0];
+        // &#x83B7;&#x53D6;File&#x4FE1;&#x606F;:
+        info.innerHTML = &apos;&#x6587;&#x4EF6;: &apos; + file.name + &apos;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>&apos; +
+                         &apos;&#x5927;&#x5C0F;: &apos; + file.size + &apos;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>&apos; +
+                         &apos;&#x4FEE;&#x6539;: &apos; + file.lastModifiedDate;
+        if (file.type !== &apos;image/jpeg&apos; &amp;&amp; file.type !== &apos;image/png&apos; &amp;&amp; file.type !== &apos;image/gif&apos;) {
+            alert(&apos;&#x4E0D;&#x662F;&#x6709;&#x6548;&#x7684;&#x56FE;&#x7247;&#x6587;&#x4EF6;!&apos;);
+            return;
+        }
+        // &#x8BFB;&#x53D6;&#x6587;&#x4EF6;:
+        let reader = new FileReader();
+        reader.onload = function(e) {  // &#x5F53;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x81EA;&#x52A8;&#x8C03;&#x7528;&#x6B64;&#x51FD;&#x6570;
+            let
+                data = e.target.result; // &apos;data:image/jpeg;base64,/9j/4AAQSk...(base64&#x7F16;&#x7801;)...&apos;            
+            preview.style.backgroundImage = &apos;url(&apos; + data + &apos;)&apos;;
+        };
+        // &#x4EE5; DataURL &#x7684;&#x5F62;&#x5F0F;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;:
+        reader.readAsDataURL(file);
+    });
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<div id="gitalk-container"></div> 
+
+<footer class="footer"><div class="footer__container--normal" alt="
+https://notes.pudongping.comdoc/javascript-notes/operation-file.html
+">
+<a href="../../gif;base64,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" data-lightbox="79692ec3-7435-475a-bc9d-8440a76dd4b1" data-title="undefined"><img src="data:image/gif;base64,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" alt="undefined"></a>
+<div class="footer__description--normal"><p class="paragraph footer__author--normal" style="color: #000 !important;">Alex<sup class="super">&#xAE;</sup></p><p class="paragraph footer__quote--normal" style="color: #000 !important;">Artisan, Backend Developer &amp; overall web enthusiast</p><div class="footer__main--normal"><p class="paragraph footer__main__paragraph--normal copyright" style="color: #666 !important;">Copyright &#xA9; Alex all right reserved</p><p class="paragraph footer__main__paragraph--normal footer__modifyTime--normal" style="color: #666 !important;"><span style="color: #666 !important;">modified at:</span>
+2021-09-04 14:28:40
+</p></div></div></div><div class="box__issues">
+
+</div></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="data-type.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: JavaScript 基本数据类型">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"JavaScript 操作文件","level":"5.3","depth":1,"previous":{"title":"JavaScript 基本数据类型","level":"5.2","depth":1,"path":"doc/javascript-notes/data-type.md","ref":"doc/javascript-notes/data-type.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","-lunr","-search","search-pro","-sharing","sharing-plus","fontsettings","livereload","expandable-chapters-small","chapter-fold","splitter","hide-element","back-to-top-button","favicon","insert-logo","pageview-count","code","prism","lightbox","github","github-buttons","donate","anchor-navigation-ex","meta","mygitalk","-change_girls","simple-mind-map","image-captions","todo","edit-link-plus","sitemap-general","rss","icp","theme-comscore","page-copyright"],"styles":{"website":"https://pudongping.github.io/notes/resources/styles/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"shell":"bash"}},"github":{"url":"https://github.com/pudongping"},"livereload":{},"meta":{"name":"","content":"","data":[{"name":"referrer","content":"never"}]},"todo":{},"splitter":{},"change_girls":{"time":10,"urls":["https://pudongping.github.io/medias/banner/0.jpg","https://pudongping.github.io/medias/banner/1.jpg","https://pudongping.github.io/medias/banner/2.jpg","https://pudongping.github.io/medias/banner/3.jpg","https://pudongping.github.io/medias/banner/4.jpg","https://pudongping.github.io/medias/banner/5.jpg","https://pudongping.github.io/medias/banner/6.jpg","https://pudongping.github.io/medias/banner/7.jpg","https://pudongping.github.io/medias/banner/8.jpg","https://pudongping.github.io/medias/banner/9.jpg","https://pudongping.github.io/medias/banner/10.jpg","https://pudongping.github.io/medias/banner/11.jpg","https://pudongping.github.io/medias/banner/12.jpg"]},"search-pro":{},"page-copyright":{"wisdom":"Artisan, Backend Developer & overall web enthusiast","noPowered":true,"copyright":"Copyright &#169; Alex","styles (normal, symmetrical)":"normal","style":"normal","isShowQRCode":true,"timeColor":"#666","utcOffset":"8","format":"YYYY-MM-dd hh:mm:ss","signature":"Alex","baseUri":"https://notes.pudongping.com","copyrightColor":"#666","description":"modified at:"},"edit-link-plus":{"label":"编辑本页","base":{"pudongping.github.io":"https://github.com/pudongping/notes/edit/main","pudongping.gitee.io":"https://gitee.com/pudongping/notes/edit/main"},"defaultBase":"https://github.com/pudongping/notes/edit/main"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"donate":{"title":"\"若有共鸣，留言足矣，若有赞赏，何以复加？\"","button":"赞赏","wechat":"https://pudongping.github.io/notes/resources/images/wechat.png","alipay":"https://pudongping.github.io/notes/resources/images/alipay.png","wechatText":"微信","alipayText":"支付宝"},"sitemap-general":{"prefix":"https://notes.pudongping.com"},"hide-element":{"elements":["a.gitbook-link[href='https://www.gitbook.com']"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"rss":{"categories":["markdown","git","gitee","github","php","python","vue.js","node.js"],"title":"蒲东平的编程笔记","description":"削个椰子皮_给个梨的笔记","author":"Alex","site_url":"https://notes.pudongping.com","feed_url":"https://notes.pudongping.com/rss","managingEditor":"276558492@qq.com (Alex Pu)","webMaster":"276558492@qq.com (Alex Pu)"},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":false,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":{"shortcut":"./resources/images/favicon.ico","bookmark":"./resources/images/favicon.ico","appleTouch":"./resources/images/favicon.png","appleTouchMore":{"120x120":"./resources/images/apple-touch-icon-120x120.png","180x180":"./resources/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":true},"theme-comscore":{},"icp":{"link":"https://beian.miit.gov.cn/","style":{},"number":"鄂ICP备18004705号-2"},"back-to-top-button":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"pudongping","repo":"notes","type":"star","count":true,"size":"small"}]},"expandable-chapters-small":{},"mygitalk":{"flipMoveOptions":{},"clientID":"8f9c9e11f169577a768b","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["pudongping"],"createIssueManually":false,"distractionFreeMode":false,"repo":"notes","owner":"pudongping","enableHotKey":true,"clientSecret":"507d601f0b338c9908dfeb7f198b89514345748e","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"qq":true,"all":["douban","facebook","google","hatenaBookmark","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"simple-mind-map":{"type":"markdown","preset":"colorful","linkShape":"diagonal","autoFit":true,"style":{}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"url":"https://pudongping.github.io/notes/resources/images/favicon.png","style":"background: none; max-height: 30px; min-height: 30px"},"image-captions":{"caption":"_PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_ - sugaryesp 的笔记","variable_name":"_pictures"}},"theme":"default","author":"Alex","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"蒲东平的编程笔记","language":"zh-hans","links":{"sidebar":{"My Blog":"https://pudongping.github.io","My Notes":"https://pudongping.github.io/notes","My GitHub":"https://github.com/pudongping","My Gitee":"https://gitee.com/pudongping"}},"gitbook":"3.2.3","description":"live and learn"},"file":{"path":"doc/javascript-notes/operation-file.md","mtime":"2021-09-04T06:28:40.934Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-04T06:30:49.374Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+        
+    
+        
+        <script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mygitalk/mygitalk.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-simple-mind-map/bundle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link-plus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
