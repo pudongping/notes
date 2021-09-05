@@ -4,7 +4,7 @@
         <description><![CDATA[削个椰子皮_给个梨的笔记]]></description>
         <link>https://notes.pudongping.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 04 Sep 2021 06:30:53 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 05 Sep 2021 13:01:40 GMT</lastBuildDate>
         <atom:link href="https://notes.pudongping.com/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Alex]]></author>
         <managingEditor><![CDATA[276558492@qq.com (Alex Pu)]]></managingEditor>
@@ -149,6 +149,13 @@ git add -A | 提交所有被删除、被替换、被修改和新增的文件到�
             <description><![CDATA[上传文件的控件为 <input type="file"> 当一个表单包含此控件时，表单的 enctype 必须指定为 multipart/form-data ， method 必须指定为 post ，浏览器才能发送表单数据，出于安全考虑，浏览器只允许用户点击 <input type="file"> 来选择本地文件，用 JavaScript 对 <input type="file"> 的 value 赋值是没有任何效果的。]]></description>
             <link>https://notes.pudongping.comdoc/javascript-notes/operation-file.html</link>
             <guid isPermaLink="true">https://notes.pudongping.comdoc/javascript-notes/operation-file.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[JavaScript 操作 DOM]]></title>
+            <description><![CDATA[appendChild 会把一个子节点添加到父节点的最后一个子节点]]></description>
+            <link>https://notes.pudongping.comdoc/javascript-notes/operation-dom.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comdoc/javascript-notes/operation-dom.html</guid>
             <dc:creator><![CDATA[Alex]]></dc:creator>
         </item>
     </channel>

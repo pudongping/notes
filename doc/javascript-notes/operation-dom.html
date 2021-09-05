@@ -1,0 +1,849 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>JavaScript 操作DOM · 蒲东平的编程笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Alex">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-copyright/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta  name="referrer"  content="never" >
+    
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="operation-file.html" />
+    
+
+    <link href="https://notes.pudongping.com/rss" title="蒲东平的编程笔记" rel="alternate" type="application/rss+xml" />
+
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"pudongping","repo":"notes","type":"star","count":true,"size":"small"}]};
+    </script>
+
+    
+        <link rel="shortcut icon" href='../../resources/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../resources/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../resources/images/favicon.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../resources/images/apple-touch-icon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../resources/images/apple-touch-icon-180x180.png">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://pudongping.github.io" target="_blank" class="custom-link">My Blog</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://pudongping.github.io/notes" target="_blank" class="custom-link">My Notes</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://github.com/pudongping" target="_blank" class="custom-link">My GitHub</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://gitee.com/pudongping" target="_blank" class="custom-link">My Gitee</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Python 系列</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../python-notes/basic-grammar.html">
+            
+                <a href="../python-notes/basic-grammar.html">
+            
+                    
+                    python 基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../python-notes/data-type.html">
+            
+                <a href="../python-notes/data-type.html">
+            
+                    
+                    python 的基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../python-notes/type.html">
+            
+                <a href="../python-notes/type.html">
+            
+                    
+                    python 类型判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../python-notes/handle-err.html">
+            
+                <a href="../python-notes/handle-err.html">
+            
+                    
+                    python 错误、异常处理、记录日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../python-notes/io.html">
+            
+                <a href="../python-notes/io.html">
+            
+                    
+                    python IO 编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../python-notes/func.html">
+            
+                <a href="../python-notes/func.html">
+            
+                    
+                    python 函数以及传参
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../python-notes/module.html">
+            
+                <a href="../python-notes/module.html">
+            
+                    
+                    python 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../python-notes/class.html">
+            
+                <a href="../python-notes/class.html">
+            
+                    
+                    python 类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../python-notes/high-func.html">
+            
+                <a href="../python-notes/high-func.html">
+            
+                    
+                    python 高阶函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="../python-notes/high-features.html">
+            
+                <a href="../python-notes/high-features.html">
+            
+                    
+                    python 高级特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Git 系列</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../git-notes/command.html">
+            
+                <a href="../git-notes/command.html">
+            
+                    
+                    git 相关命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../git-notes/branch-bug.html">
+            
+                <a href="../git-notes/branch-bug.html">
+            
+                    
+                    git bug 分支
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../git-notes/tags.html">
+            
+                <a href="../git-notes/tags.html">
+            
+                    
+                    git 标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Docker 系列</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../docker-notes/command.html">
+            
+                <a href="../docker-notes/command.html">
+            
+                    
+                    docker 常见命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../docker-notes/about-laradock.html">
+            
+                <a href="../docker-notes/about-laradock.html">
+            
+                    
+                    laradock 笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">JavaScript 系列</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="basic-grammar.html">
+            
+                <a href="basic-grammar.html">
+            
+                    
+                    JavaScript 基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="data-type.html">
+            
+                <a href="data-type.html">
+            
+                    
+                    JavaScript 基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="operation-file.html">
+            
+                <a href="operation-file.html">
+            
+                    
+                    JavaScript 操作文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.4" data-path="operation-dom.html">
+            
+                <a href="operation-dom.html">
+            
+                    
+                    JavaScript 操作DOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+
+    
+    <li>
+        
+        
+        
+            
+        
+        
+            <a href="https://beian.miit.gov.cn/" target="blank" class="gitbook-link">
+                鄂ICP备18004705号-2
+            </a>
+        
+    </li>
+    
+</ul>
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >JavaScript 操作DOM</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#javascript-&#x64CD;&#x4F5C;-dom"><b></b>JavaScript &#x64CD;&#x4F5C; DOM</a></li><ul><li><span class="title-icon "></span><a href="#&#x53D6;&#x51FA;-dom-&#x8282;&#x70B9;"><b></b>&#x53D6;&#x51FA; DOM &#x8282;&#x70B9;</a></li><li><span class="title-icon "></span><a href="#&#x66F4;&#x65B0;-dom"><b></b>&#x66F4;&#x65B0; DOM</a></li><li><span class="title-icon "></span><a href="#&#x63D2;&#x5165;-dom"><b></b>&#x63D2;&#x5165; DOM</a></li><ul><li><span class="title-icon "></span><a href="#appendchild"><b></b>appendChild</a></li><li><span class="title-icon "></span><a href="#insertbefore"><b></b>insertBefore</a></li></ul><li><span class="title-icon "></span><a href="#&#x5220;&#x9664;-dom"><b></b>&#x5220;&#x9664; DOM</a></li></ul></ul></div><h1 id="javascript-&#x64CD;&#x4F5C;-dom"><a name="javascript-&#x64CD;&#x4F5C;-dom" class="anchor-navigation-ex-anchor" href="#javascript-&#x64CD;&#x4F5C;-dom"><i class="fa fa-link" aria-hidden="true"></i></a>JavaScript &#x64CD;&#x4F5C; DOM</h1>
+<h2 id="&#x53D6;&#x51FA;-dom-&#x8282;&#x70B9;"><a name="&#x53D6;&#x51FA;-dom-&#x8282;&#x70B9;" class="anchor-navigation-ex-anchor" href="#&#x53D6;&#x51FA;-dom-&#x8282;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53D6;&#x51FA; DOM &#x8282;&#x70B9;</h2>
+<pre class="language-"><code class="lang-js">
+<span class="token comment">// &#x8FD4;&#x56DE; id &#x4E3A; `test` &#x7684;&#x8282;&#x70B9;</span>
+<span class="token keyword">let</span> test <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&apos;test&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// &#x5148;&#x5B9A;&#x4F4D; id &#x4E3A; `test-table` &#x7684;&#x8282;&#x70B9;&#xFF0C;&#x518D;&#x8FD4;&#x56DE;&#x5176;&#x5185;&#x90E8;&#x6240;&#x6709; tr &#x8282;&#x70B9;</span>
+<span class="token keyword">let</span> trs <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&apos;test-table&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">&apos;tr&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// &#x5148;&#x5B9A;&#x4F4D; id &#x4E3A; `test-div` &#x7684;&#x8282;&#x70B9;&#xFF0C;&#x518D;&#x8FD4;&#x56DE;&#x5176;&#x5185;&#x90E8;&#x6240;&#x6709; class &#x5305;&#x542B; red &#x7684;&#x8282;&#x70B9;</span>
+<span class="token keyword">let</span> reds <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&apos;test-div&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">&apos;red&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// &#x83B7;&#x53D6;&#x8282;&#x70B9; test &#x4E0B;&#x7684;&#x6240;&#x6709;&#x76F4;&#x5C5E;&#x5B50;&#x8282;&#x70B9;</span>
+<span class="token keyword">let</span> cs <span class="token operator">=</span> test<span class="token punctuation">.</span>children<span class="token punctuation">;</span>
+
+<span class="token comment">// &#x83B7;&#x53D6;&#x8282;&#x70B9; test &#x4E0B;&#x7B2C;&#x4E00;&#x4E2A;&#x5B50;&#x8282;&#x70B9;</span>
+<span class="token keyword">let</span> firstCs <span class="token operator">=</span> test<span class="token punctuation">.</span>firstElementChild<span class="token punctuation">;</span>
+
+<span class="token comment">// &#x83B7;&#x53D6;&#x8282;&#x70B9; test &#x4E0B;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5B50;&#x8282;&#x70B9;</span>
+<span class="token keyword">let</span> lastCs <span class="token operator">=</span> test<span class="token punctuation">.</span>lastElementChild<span class="token punctuation">;</span>
+
+
+<span class="token comment">// &#x901A;&#x8FC7; querySelector &#x83B7;&#x53D6; id &#x4E3A; q1 &#x7684;&#x8282;&#x70B9;</span>
+<span class="token keyword">let</span> q1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&apos;#q1&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// &#x901A;&#x8FC7; querySelectorAll &#x83B7;&#x53D6; q1 &#x8282;&#x70B9;&#x5185;&#x7684;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x6240;&#x6709;&#x8282;&#x70B9;</span>
+<span class="token keyword">let</span> ps <span class="token operator">=</span> q1<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">&apos;div.highlighted &gt; p&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="&#x66F4;&#x65B0;-dom"><a name="&#x66F4;&#x65B0;-dom" class="anchor-navigation-ex-anchor" href="#&#x66F4;&#x65B0;-dom"><i class="fa fa-link" aria-hidden="true"></i></a>&#x66F4;&#x65B0; DOM</h2>
+<pre class="language-"><code class="lang-html">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>p-id<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<pre class="language-"><code class="lang-js">
+<span class="token keyword">let</span> p <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&apos;p-id&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// &#x8BBE;&#x7F6E;&#x6587;&#x672C;&#x4E3A; ABC</span>
+p<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">&apos;ABC&apos;</span><span class="token punctuation">;</span>  <span class="token comment">// &#x6B64;&#x65F6;&#x4E3A; &lt;p id=&quot;p-id&quot;&gt;ABC&lt;/p&gt;</span>
+<span class="token comment">// &#x8BBE;&#x7F6E; HTML</span>
+p<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">&apos;ABC &lt;span style=&quot;color:red&quot;&gt;RED&lt;/span&gt; XYZ&apos;</span><span class="token punctuation">;</span>  <span class="token comment">// &#x76F4;&#x63A5;&#x5C06;&#x539F;&#x6765;&#x7684;&#x6240;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x7ED9;&#x66FF;&#x6362;&#x6389;&#x4E86;</span>
+</code></pre>
+<h2 id="&#x63D2;&#x5165;-dom"><a name="&#x63D2;&#x5165;-dom" class="anchor-navigation-ex-anchor" href="#&#x63D2;&#x5165;-dom"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63D2;&#x5165; DOM</h2>
+<h3 id="appendchild"><a name="appendchild" class="anchor-navigation-ex-anchor" href="#appendchild"><i class="fa fa-link" aria-hidden="true"></i></a>appendChild</h3>
+<p>appendChild &#x4F1A;&#x628A;&#x4E00;&#x4E2A;&#x5B50;&#x8282;&#x70B9;&#x6DFB;&#x52A0;&#x5230;&#x7236;&#x8282;&#x70B9;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5B50;&#x8282;&#x70B9;</p>
+<p><strong>&#x6CA1;&#x66F4;&#x6539;&#x4E4B;&#x524D;&#x7684; html &#x7ED3;&#x6784;</strong></p>
+<pre class="language-"><code class="lang-html">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>JavaScript<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>list<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>java<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Java<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>python<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Python<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>scheme<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Scheme<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<pre class="language-"><code class="lang-js">
+<span class="token keyword">let</span> js <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&apos;js&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    list <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&apos;list&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+list<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>js<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x66F4;&#x6539;&#x4E4B;&#x540E;&#x7684; html &#x7ED3;&#x6784;</strong></p>
+<blockquote>
+<p>&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x63D2;&#x5165;&#x7684; js &#x8282;&#x70B9;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x4E8E;&#x5F53;&#x524D;&#x7684;&#x6587;&#x6863;&#x6811;&#xFF0C;&#x56E0;&#x6B64;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x9996;&#x5148;&#x4F1A;&#x4ECE;&#x539F;&#x5148;&#x7684;&#x4F4D;&#x7F6E;&#x5220;&#x9664;&#xFF0C;&#x518D;&#x63D2;&#x5165;&#x5230;&#x65B0;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+</blockquote>
+<pre class="language-"><code class="lang-html">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>list<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>java<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Java<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>python<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Python<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>scheme<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Scheme<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>JavaScript<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p><strong>&#x4ECE;&#x96F6;&#x5F00;&#x59CB;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x63D2;&#x5165;&#x5230;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;</strong></p>
+<pre class="language-"><code class="lang-js">
+<span class="token keyword">let</span>
+    list <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&apos;list&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    haskell <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">&apos;p&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+haskell<span class="token punctuation">.</span>id <span class="token operator">=</span> <span class="token string">&apos;haskell&apos;</span><span class="token punctuation">;</span>
+haskell<span class="token punctuation">.</span>innerText <span class="token operator">=</span> <span class="token string">&apos;Haskell&apos;</span><span class="token punctuation">;</span>
+list<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>haskell<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x66F4;&#x6539;&#x4E4B;&#x540E;&#x7684; html &#x7ED3;&#x6784;</strong></p>
+<pre class="language-"><code class="lang-html">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>list<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>java<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Java<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>python<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Python<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>scheme<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Scheme<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>haskell<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Haskell<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>&#x52A8;&#x6001;&#x6DFB;&#x52A0; css &#x5B9A;&#x4E49;</p>
+<pre class="language-"><code class="lang-js">
+<span class="token keyword">let</span> d <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">&apos;style&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+d<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">&apos;type&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;text/css&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+d<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">&apos;p { color: red }&apos;</span><span class="token punctuation">;</span>
+document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">&apos;head&apos;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="insertbefore"><a name="insertbefore" class="anchor-navigation-ex-anchor" href="#insertbefore"><i class="fa fa-link" aria-hidden="true"></i></a>insertBefore</h3>
+<p>insertBefore &#x53EF;&#x4EE5;&#x5C06;&#x5B50;&#x8282;&#x70B9;&#x63D2;&#x5165;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x4F4D;&#x7F6E;</p>
+<p><strong>&#x6CA1;&#x66F4;&#x6539;&#x4E4B;&#x524D;&#x7684; html &#x7ED3;&#x6784;</strong></p>
+<pre class="language-"><code class="lang-html">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>list<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>java<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Java<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>python<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Python<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>scheme<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Scheme<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<pre class="language-"><code class="lang-js">
+<span class="token keyword">let</span>
+    list <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&apos;list&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    ref <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&apos;python&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    haskell <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">&apos;p&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+haskell<span class="token punctuation">.</span>id <span class="token operator">=</span> <span class="token string">&apos;haskell&apos;</span><span class="token punctuation">;</span>
+haskell<span class="token punctuation">.</span>innerText <span class="token operator">=</span> <span class="token string">&apos;Haskell&apos;</span><span class="token punctuation">;</span>
+list<span class="token punctuation">.</span><span class="token function">insertBefore</span><span class="token punctuation">(</span>haskell<span class="token punctuation">,</span> ref<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x66F4;&#x6539;&#x4E4B;&#x540E;&#x7684; html &#x7ED3;&#x6784;</strong></p>
+<pre class="language-"><code class="lang-html">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>list<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>java<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Java<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>haskell<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Haskell<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>python<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Python<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>scheme<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Scheme<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h2 id="&#x5220;&#x9664;-dom"><a name="&#x5220;&#x9664;-dom" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;-dom"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664; DOM</h2>
+<pre class="language-"><code class="lang-js">
+<span class="token comment">// &#x62FF;&#x5230;&#x5F85;&#x5220;&#x9664;&#x8282;&#x70B9;</span>
+<span class="token keyword">let</span> self <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&apos;to-be-removed&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// &#x62FF;&#x5230;&#x7236;&#x8282;&#x70B9;</span>
+<span class="token keyword">let</span> parent <span class="token operator">=</span> self<span class="token punctuation">.</span>parentElement<span class="token punctuation">;</span>
+<span class="token comment">// &#x5220;&#x9664;</span>
+<span class="token keyword">let</span> removed <span class="token operator">=</span> parent<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">;</span>
+removed <span class="token operator">===</span> self<span class="token punctuation">;</span>  <span class="token comment">// true</span>
+</code></pre>
+<blockquote>
+<p>&#x5F53;&#x4F60;&#x904D;&#x5386;&#x4E00;&#x4E2A;&#x7236;&#x8282;&#x70B9;&#x7684;&#x5B50;&#x8282;&#x70B9;&#x5E76;&#x8FDB;&#x884C;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x8981;&#x6CE8;&#x610F;&#xFF0C;children &#x5C5E;&#x6027;&#x662F;&#x4E00;&#x4E2A;&#x53EA;&#x8BFB;&#x5C5E;&#x6027;&#xFF0C;&#x5E76;&#x4E14;&#x5B83;&#x5728;&#x5B50;&#x8282;&#x70B9;&#x53D8;&#x5316;&#x65F6;&#x4F1A;&#x5B9E;&#x65F6;&#x66F4;&#x65B0;&#x3002;</p>
+</blockquote>
+<pre class="language-"><code class="lang-html">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>parent<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>First<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Second<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>&#x5FAA;&#x73AF;&#x5220;&#x9664;&#x5B50;&#x8282;&#x70B9;&#x65F6;</p>
+<pre class="language-"><code class="lang-js">
+<span class="token keyword">let</span> parent <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&apos;parent&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+parent<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>parent<span class="token punctuation">.</span>children<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+parent<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>parent<span class="token punctuation">.</span>children<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#x6D4F;&#x89C8;&#x5668;&#x6B64;&#x65F6;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x56E0;&#x4E3A;&#x5DF2;&#x7ECF;&#x5220;&#x9664;&#x8FC7;&#x4E00;&#x4E2A;&#x5B50;&#x8282;&#x70B9;&#x4E86;&#xFF0C;&#x6B64;&#x65F6;&#x6CA1;&#x6709;&#x7D22;&#x5F15;&#x4E3A; 1 &#x7684;&#x8282;&#x70B9;&#x4E86;&#xFF0C;&#x6B64;&#x65F6;&#xFF0C;&#x539F;&#x6765;&#x7D22;&#x5F15;&#x4E3A; 1 &#x7684;&#x8282;&#x70B9;&#x7684;&#x7D22;&#x5F15;&#x5DF2;&#x7ECF;&#x53D8;&#x6210;&#x4E86; 0</span>
+</code></pre>
+<div id="gitalk-container"></div> 
+
+<footer class="footer"><div class="footer__container--normal" alt="
+https://notes.pudongping.comdoc/javascript-notes/operation-dom.html
+">
+<a href="../../gif;base64,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" data-lightbox="a8f3fe71-c871-4e16-8253-157678186323" data-title="undefined"><img src="data:image/gif;base64,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" alt="undefined"></a>
+<div class="footer__description--normal"><p class="paragraph footer__author--normal" style="color: #000 !important;">Alex<sup class="super">&#xAE;</sup></p><p class="paragraph footer__quote--normal" style="color: #000 !important;">Artisan, Backend Developer &amp; overall web enthusiast</p><div class="footer__main--normal"><p class="paragraph footer__main__paragraph--normal copyright" style="color: #666 !important;">Copyright &#xA9; Alex all right reserved</p><p class="paragraph footer__main__paragraph--normal footer__modifyTime--normal" style="color: #666 !important;"><span style="color: #666 !important;">modified at:</span>
+2021-09-05 21:01:12
+</p></div></div></div><div class="box__issues">
+
+</div></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="operation-file.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: JavaScript 操作文件">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"JavaScript 操作DOM","level":"5.4","depth":1,"previous":{"title":"JavaScript 操作文件","level":"5.3","depth":1,"path":"doc/javascript-notes/operation-file.md","ref":"doc/javascript-notes/operation-file.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","-lunr","-search","search-pro","-sharing","sharing-plus","fontsettings","livereload","expandable-chapters-small","chapter-fold","splitter","hide-element","back-to-top-button","favicon","insert-logo","pageview-count","code","prism","lightbox","github","github-buttons","donate","anchor-navigation-ex","meta","mygitalk","-change_girls","simple-mind-map","image-captions","todo","edit-link-plus","sitemap-general","rss","icp","theme-comscore","page-copyright"],"styles":{"website":"https://pudongping.github.io/notes/resources/styles/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"shell":"bash"}},"github":{"url":"https://github.com/pudongping"},"livereload":{},"meta":{"name":"","content":"","data":[{"name":"referrer","content":"never"}]},"todo":{},"splitter":{},"change_girls":{"time":10,"urls":["https://pudongping.github.io/medias/banner/0.jpg","https://pudongping.github.io/medias/banner/1.jpg","https://pudongping.github.io/medias/banner/2.jpg","https://pudongping.github.io/medias/banner/3.jpg","https://pudongping.github.io/medias/banner/4.jpg","https://pudongping.github.io/medias/banner/5.jpg","https://pudongping.github.io/medias/banner/6.jpg","https://pudongping.github.io/medias/banner/7.jpg","https://pudongping.github.io/medias/banner/8.jpg","https://pudongping.github.io/medias/banner/9.jpg","https://pudongping.github.io/medias/banner/10.jpg","https://pudongping.github.io/medias/banner/11.jpg","https://pudongping.github.io/medias/banner/12.jpg"]},"search-pro":{},"page-copyright":{"wisdom":"Artisan, Backend Developer & overall web enthusiast","noPowered":true,"copyright":"Copyright &#169; Alex","styles (normal, symmetrical)":"normal","style":"normal","isShowQRCode":true,"timeColor":"#666","utcOffset":"8","format":"YYYY-MM-dd hh:mm:ss","signature":"Alex","baseUri":"https://notes.pudongping.com","copyrightColor":"#666","description":"modified at:"},"edit-link-plus":{"label":"编辑本页","base":{"pudongping.github.io":"https://github.com/pudongping/notes/edit/main","pudongping.gitee.io":"https://gitee.com/pudongping/notes/edit/main"},"defaultBase":"https://github.com/pudongping/notes/edit/main"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"donate":{"title":"\"若有共鸣，留言足矣，若有赞赏，何以复加？\"","button":"赞赏","wechat":"https://pudongping.github.io/notes/resources/images/wechat.png","alipay":"https://pudongping.github.io/notes/resources/images/alipay.png","wechatText":"微信","alipayText":"支付宝"},"sitemap-general":{"prefix":"https://notes.pudongping.com"},"hide-element":{"elements":["a.gitbook-link[href='https://www.gitbook.com']"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"rss":{"categories":["markdown","git","gitee","github","php","python","vue.js","node.js"],"title":"蒲东平的编程笔记","description":"削个椰子皮_给个梨的笔记","author":"Alex","site_url":"https://notes.pudongping.com","feed_url":"https://notes.pudongping.com/rss","managingEditor":"276558492@qq.com (Alex Pu)","webMaster":"276558492@qq.com (Alex Pu)"},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":false,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":{"shortcut":"./resources/images/favicon.ico","bookmark":"./resources/images/favicon.ico","appleTouch":"./resources/images/favicon.png","appleTouchMore":{"120x120":"./resources/images/apple-touch-icon-120x120.png","180x180":"./resources/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":true},"theme-comscore":{},"icp":{"link":"https://beian.miit.gov.cn/","style":{},"number":"鄂ICP备18004705号-2"},"back-to-top-button":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"pudongping","repo":"notes","type":"star","count":true,"size":"small"}]},"expandable-chapters-small":{},"mygitalk":{"flipMoveOptions":{},"clientID":"8f9c9e11f169577a768b","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["pudongping"],"createIssueManually":false,"distractionFreeMode":false,"repo":"notes","owner":"pudongping","enableHotKey":true,"clientSecret":"507d601f0b338c9908dfeb7f198b89514345748e","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"qq":true,"all":["douban","facebook","google","hatenaBookmark","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"simple-mind-map":{"type":"markdown","preset":"colorful","linkShape":"diagonal","autoFit":true,"style":{}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"url":"https://pudongping.github.io/notes/resources/images/favicon.png","style":"background: none; max-height: 30px; min-height: 30px"},"image-captions":{"caption":"_PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_ - sugaryesp 的笔记","variable_name":"_pictures"}},"theme":"default","author":"Alex","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"蒲东平的编程笔记","language":"zh-hans","links":{"sidebar":{"My Blog":"https://pudongping.github.io","My Notes":"https://pudongping.github.io/notes","My GitHub":"https://github.com/pudongping","My Gitee":"https://gitee.com/pudongping"}},"gitbook":"3.2.3","description":"live and learn"},"file":{"path":"doc/javascript-notes/operation-dom.md","mtime":"2021-09-05T13:01:12.818Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-05T13:01:36.191Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+        
+    
+        
+        <script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mygitalk/mygitalk.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-simple-mind-map/bundle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link-plus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
