@@ -4,7 +4,7 @@
         <description><![CDATA[削个椰子皮_给个梨的笔记]]></description>
         <link>https://notes.pudongping.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 05 Sep 2021 13:01:40 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 05 Sep 2021 16:54:50 GMT</lastBuildDate>
         <atom:link href="https://notes.pudongping.com/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Alex]]></author>
         <managingEditor><![CDATA[276558492@qq.com (Alex Pu)]]></managingEditor>
@@ -156,6 +156,13 @@ git add -A | 提交所有被删除、被替换、被修改和新增的文件到�
             <description><![CDATA[appendChild 会把一个子节点添加到父节点的最后一个子节点]]></description>
             <link>https://notes.pudongping.comdoc/javascript-notes/operation-dom.html</link>
             <guid isPermaLink="true">https://notes.pudongping.comdoc/javascript-notes/operation-dom.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[JavaScript 操作表单]]></title>
+            <description><![CDATA[获取对应用户输入值]]></description>
+            <link>https://notes.pudongping.comdoc/javascript-notes/operation-form.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comdoc/javascript-notes/operation-form.html</guid>
             <dc:creator><![CDATA[Alex]]></dc:creator>
         </item>
     </channel>
