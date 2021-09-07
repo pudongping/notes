@@ -4,7 +4,7 @@
         <description><![CDATA[削个椰子皮_给个梨的笔记]]></description>
         <link>https://notes.pudongping.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 05 Sep 2021 16:54:50 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 07 Sep 2021 12:23:37 GMT</lastBuildDate>
         <atom:link href="https://notes.pudongping.com/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Alex]]></author>
         <managingEditor><![CDATA[276558492@qq.com (Alex Pu)]]></managingEditor>
@@ -163,6 +163,13 @@ git add -A | 提交所有被删除、被替换、被修改和新增的文件到�
             <description><![CDATA[获取对应用户输入值]]></description>
             <link>https://notes.pudongping.comdoc/javascript-notes/operation-form.html</link>
             <guid isPermaLink="true">https://notes.pudongping.comdoc/javascript-notes/operation-form.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[浏览器对象]]></title>
+            <description><![CDATA[window 对象不但充当全局作用域，而且表示浏览器窗口]]></description>
+            <link>https://notes.pudongping.comdoc/javascript-notes/window-object.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comdoc/javascript-notes/window-object.html</guid>
             <dc:creator><![CDATA[Alex]]></dc:creator>
         </item>
     </channel>
