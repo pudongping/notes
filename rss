@@ -4,7 +4,7 @@
         <description><![CDATA[削个椰子皮_给个梨的笔记]]></description>
         <link>https://notes.pudongping.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 11 Sep 2021 14:49:33 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 14 Sep 2021 02:19:55 GMT</lastBuildDate>
         <atom:link href="https://notes.pudongping.com/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Alex]]></author>
         <managingEditor><![CDATA[276558492@qq.com (Alex Pu)]]></managingEditor>
@@ -177,6 +177,13 @@ git add -A | 提交所有被删除、被替换、被修改和新增的文件到�
             <description><![CDATA[程序也可以主动抛出一个错误，让执行流程直接跳转到 catch 块。抛出错误使用 throw 语句。]]></description>
             <link>https://notes.pudongping.comdoc/javascript-notes/error-handle.html</link>
             <guid isPermaLink="true">https://notes.pudongping.comdoc/javascript-notes/error-handle.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[JavaScript 的高阶函数的使用]]></title>
+            <description><![CDATA[从数组中过滤掉值]]></description>
+            <link>https://notes.pudongping.comdoc/javascript-notes/high-order-useage.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comdoc/javascript-notes/high-order-useage.html</guid>
             <dc:creator><![CDATA[Alex]]></dc:creator>
         </item>
     </channel>
