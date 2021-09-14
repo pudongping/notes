@@ -52,4 +52,4 @@
 - [JavaScript 操作表单](doc/javascript-notes/operation-form.md)
 - [JavaScript 浏览器对象](doc/javascript-notes/window-object.md)
 - [JavaScript 错误处理](doc/javascript-notes/error-handle.md)
-
+- [JavaScript 高阶函数的使用](doc/javascript-notes/high-order-useage.md)
