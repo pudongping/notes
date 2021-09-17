@@ -4,7 +4,7 @@
         <description><![CDATA[削个椰子皮_给个梨的笔记]]></description>
         <link>https://notes.pudongping.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 16 Sep 2021 01:53:03 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 17 Sep 2021 10:44:36 GMT</lastBuildDate>
         <atom:link href="https://notes.pudongping.com/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Alex]]></author>
         <managingEditor><![CDATA[276558492@qq.com (Alex Pu)]]></managingEditor>
@@ -197,6 +197,13 @@ git add -A | 提交所有被删除、被替换、被修改和新增的文件到�
             <title><![CDATA[ES6 面向对象编程]]></title>
             <link>https://notes.pudongping.comdoc/javascript-notes/object-coder.html</link>
             <guid isPermaLink="true">https://notes.pudongping.comdoc/javascript-notes/object-coder.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[JavaScript ES6 中箭头函数的使用]]></title>
+            <description><![CDATA[定义一个箭头函数]]></description>
+            <link>https://notes.pudongping.comdoc/javascript-notes/use-arrows-function.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comdoc/javascript-notes/use-arrows-function.html</guid>
             <dc:creator><![CDATA[Alex]]></dc:creator>
         </item>
     </channel>
