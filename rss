@@ -4,7 +4,7 @@
         <description><![CDATA[削个椰子皮_给个梨的笔记]]></description>
         <link>https://notes.pudongping.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 17 Sep 2021 10:44:36 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 18 Sep 2021 02:23:30 GMT</lastBuildDate>
         <atom:link href="https://notes.pudongping.com/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Alex]]></author>
         <managingEditor><![CDATA[276558492@qq.com (Alex Pu)]]></managingEditor>
@@ -204,6 +204,13 @@ git add -A | 提交所有被删除、被替换、被修改和新增的文件到�
             <description><![CDATA[定义一个箭头函数]]></description>
             <link>https://notes.pudongping.comdoc/javascript-notes/use-arrows-function.html</link>
             <guid isPermaLink="true">https://notes.pudongping.comdoc/javascript-notes/use-arrows-function.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[underscore 使用]]></title>
+            <description><![CDATA[underscore 是一套完善的函数式编程接口，underscore 会把自身绑定到唯一的全局变量 _ 上。underscore 为集合类对象提供了一致的接口。集合类是指 Array 和 Object，暂不支持 Map 和 Set。]]></description>
+            <link>https://notes.pudongping.comdoc/javascript-notes/underscore-useage.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comdoc/javascript-notes/underscore-useage.html</guid>
             <dc:creator><![CDATA[Alex]]></dc:creator>
         </item>
     </channel>
