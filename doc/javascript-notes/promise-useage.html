@@ -1,0 +1,1042 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>JavaScript Promise 使用  · 蒲东平的编程笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Alex">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-copyright/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta  name="referrer"  content="never" >
+    
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="underscore-useage.html" />
+    
+
+    <link href="https://notes.pudongping.com/rss" title="蒲东平的编程笔记" rel="alternate" type="application/rss+xml" />
+
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"pudongping","repo":"notes","type":"star","count":true,"size":"small"}]};
+    </script>
+
+    
+        <link rel="shortcut icon" href='../../resources/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../resources/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../resources/images/favicon.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../resources/images/apple-touch-icon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../resources/images/apple-touch-icon-180x180.png">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://pudongping.github.io" target="_blank" class="custom-link">My Blog</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://pudongping.github.io/notes" target="_blank" class="custom-link">My Notes</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://github.com/pudongping" target="_blank" class="custom-link">My GitHub</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://gitee.com/pudongping" target="_blank" class="custom-link">My Gitee</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Python 系列</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../python-notes/basic-grammar.html">
+            
+                <a href="../python-notes/basic-grammar.html">
+            
+                    
+                    python 基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../python-notes/data-type.html">
+            
+                <a href="../python-notes/data-type.html">
+            
+                    
+                    python 的基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../python-notes/type.html">
+            
+                <a href="../python-notes/type.html">
+            
+                    
+                    python 类型判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../python-notes/handle-err.html">
+            
+                <a href="../python-notes/handle-err.html">
+            
+                    
+                    python 错误、异常处理、记录日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../python-notes/io.html">
+            
+                <a href="../python-notes/io.html">
+            
+                    
+                    python IO 编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../python-notes/func.html">
+            
+                <a href="../python-notes/func.html">
+            
+                    
+                    python 函数以及传参
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../python-notes/module.html">
+            
+                <a href="../python-notes/module.html">
+            
+                    
+                    python 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../python-notes/class.html">
+            
+                <a href="../python-notes/class.html">
+            
+                    
+                    python 类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../python-notes/high-func.html">
+            
+                <a href="../python-notes/high-func.html">
+            
+                    
+                    python 高阶函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="../python-notes/high-features.html">
+            
+                <a href="../python-notes/high-features.html">
+            
+                    
+                    python 高级特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Git 系列</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../git-notes/command.html">
+            
+                <a href="../git-notes/command.html">
+            
+                    
+                    git 相关命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../git-notes/branch-bug.html">
+            
+                <a href="../git-notes/branch-bug.html">
+            
+                    
+                    git bug 分支
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../git-notes/tags.html">
+            
+                <a href="../git-notes/tags.html">
+            
+                    
+                    git 标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Docker 系列</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../docker-notes/command.html">
+            
+                <a href="../docker-notes/command.html">
+            
+                    
+                    docker 常见命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../docker-notes/about-laradock.html">
+            
+                <a href="../docker-notes/about-laradock.html">
+            
+                    
+                    laradock 笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">JavaScript 系列</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="basic-grammar.html">
+            
+                <a href="basic-grammar.html">
+            
+                    
+                    JavaScript 基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="data-type.html">
+            
+                <a href="data-type.html">
+            
+                    
+                    JavaScript 基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="operation-file.html">
+            
+                <a href="operation-file.html">
+            
+                    
+                    JavaScript 操作文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="operation-dom.html">
+            
+                <a href="operation-dom.html">
+            
+                    
+                    JavaScript 操作DOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="operation-form.html">
+            
+                <a href="operation-form.html">
+            
+                    
+                    JavaScript 操作表单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="window-object.html">
+            
+                <a href="window-object.html">
+            
+                    
+                    JavaScript 浏览器对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="error-handle.html">
+            
+                <a href="error-handle.html">
+            
+                    
+                    JavaScript 错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" data-path="high-order-useage.html">
+            
+                <a href="high-order-useage.html">
+            
+                    
+                    JavaScript 高阶函数的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.9" data-path="parsing-the-assignment.html">
+            
+                <a href="parsing-the-assignment.html">
+            
+                    
+                    JavaScript 解析赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.10" data-path="object-coder.html">
+            
+                <a href="object-coder.html">
+            
+                    
+                    JavaScript 面向对象编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.11" data-path="use-arrows-function.html">
+            
+                <a href="use-arrows-function.html">
+            
+                    
+                    JavaScript ES6 中箭头函数的使用 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.12" data-path="underscore-useage.html">
+            
+                <a href="underscore-useage.html">
+            
+                    
+                    JavaScript underscore 使用 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.13" data-path="promise-useage.html">
+            
+                <a href="promise-useage.html">
+            
+                    
+                    JavaScript Promise 使用 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+
+    
+    <li>
+        
+        
+        
+            
+        
+        
+            <a href="https://beian.miit.gov.cn/" target="blank" class="gitbook-link">
+                鄂ICP备18004705号-2
+            </a>
+        
+    </li>
+    
+</ul>
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >JavaScript Promise 使用 </a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#promise-&#x7684;&#x4F7F;&#x7528;"><b></b>Promise &#x7684;&#x4F7F;&#x7528;</a></li><ul><li><span class="title-icon "></span><a href="#promise-&#x7684;&#x7B80;&#x5355;&#x4F7F;&#x7528;"><b></b>promise &#x7684;&#x7B80;&#x5355;&#x4F7F;&#x7528;</a></li><li><span class="title-icon "></span><a href="#promise-&#x591A;&#x5C42;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x8C03;&#x7528;-&#xFF08;&#x907F;&#x514D;&#x51FA;&#x73B0;-ajax-&#x7684;&#x56DE;&#x8C03;&#x5730;&#x72F1;&#xFF09;"><b></b>promise &#x591A;&#x5C42;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x8C03;&#x7528; &#xFF08;&#x907F;&#x514D;&#x51FA;&#x73B0; ajax &#x7684;&#x56DE;&#x8C03;&#x5730;&#x72F1;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x5931;&#x8D25;&#x65F6;&#x5019;&#x7684;&#x5904;&#x7406;"><b></b>&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x5931;&#x8D25;&#x65F6;&#x5019;&#x7684;&#x5904;&#x7406;</a></li><li><span class="title-icon "></span><a href="#&#x5F53;&#x9700;&#x8981;&#x540C;&#x65F6;&#x6267;&#x884C;&#x4E24;&#x4E2A;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;-&#xFF08;&#x5F88;&#x65E9;&#x4E4B;&#x524D;&#x7684;&#x65B9;&#x6848;&#xFF09;"><b></b>&#x5F53;&#x9700;&#x8981;&#x540C;&#x65F6;&#x6267;&#x884C;&#x4E24;&#x4E2A;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019; &#xFF08;&#x5F88;&#x65E9;&#x4E4B;&#x524D;&#x7684;&#x65B9;&#x6848;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x5F53;&#x540C;&#x65F6;&#x6267;&#x884C;&#x4E24;&#x4E2A;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x91C7;&#x7528;-promise-&#x7684;-all-&#x65B9;&#x6CD5;"><b></b>&#x5F53;&#x540C;&#x65F6;&#x6267;&#x884C;&#x4E24;&#x4E2A;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x91C7;&#x7528; Promise &#x7684; all &#x65B9;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#&#x5F53;&#x540C;&#x65F6;&#x6267;&#x884C;&#x4E24;&#x4E2A;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x83B7;&#x5F97;&#x5148;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x5373;&#x53EF;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;-promise-&#x7684;-race-&#x65B9;&#x6CD5;"><b></b>&#x5F53;&#x540C;&#x65F6;&#x6267;&#x884C;&#x4E24;&#x4E2A;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x83B7;&#x5F97;&#x5148;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x5373;&#x53EF;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x7528; Promise &#x7684; race &#x65B9;&#x6CD5;</a></li></ul></ul></div><h1 id="promise-&#x7684;&#x4F7F;&#x7528;"><a name="promise-&#x7684;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#promise-&#x7684;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>Promise &#x7684;&#x4F7F;&#x7528;</h1>
+<p>Promise &#x662F;<code>&#x5F02;&#x6B65;&#x7F16;&#x7A0B;</code>&#x7684;&#x4E00;&#x79CD;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;</p>
+<h2 id="promise-&#x7684;&#x7B80;&#x5355;&#x4F7F;&#x7528;"><a name="promise-&#x7684;&#x7B80;&#x5355;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#promise-&#x7684;&#x7B80;&#x5355;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>promise &#x7684;&#x7B80;&#x5355;&#x4F7F;&#x7528;</h2>
+<pre class="language-"><code class="lang-js">
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+
+ <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+
+   <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+     <span class="token comment">// &#x6210;&#x529F;&#x65F6;&#x8C03;&#x7528;</span>
+     <span class="token comment">// resolve(&apos;Hello World&apos;)</span>
+
+     <span class="token comment">// &#x5931;&#x8D25;&#x65F6;&#x8C03;&#x7528;</span>
+     <span class="token function">reject</span><span class="token punctuation">(</span><span class="token string">&apos;error message&apos;</span><span class="token punctuation">)</span>
+   <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+
+ <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">data</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre>
+<h2 id="promise-&#x591A;&#x5C42;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x8C03;&#x7528;-&#xFF08;&#x907F;&#x514D;&#x51FA;&#x73B0;-ajax-&#x7684;&#x56DE;&#x8C03;&#x5730;&#x72F1;&#xFF09;"><a name="promise-&#x591A;&#x5C42;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x8C03;&#x7528;-&#xFF08;&#x907F;&#x514D;&#x51FA;&#x73B0;-ajax-&#x7684;&#x56DE;&#x8C03;&#x5730;&#x72F1;&#xFF09;" class="anchor-navigation-ex-anchor" href="#promise-&#x591A;&#x5C42;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x8C03;&#x7528;-&#xFF08;&#x907F;&#x514D;&#x51FA;&#x73B0;-ajax-&#x7684;&#x56DE;&#x8C03;&#x5730;&#x72F1;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>promise &#x591A;&#x5C42;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x8C03;&#x7528; &#xFF08;&#x907F;&#x514D;&#x51FA;&#x73B0; ajax &#x7684;<code>&#x56DE;&#x8C03;&#x5730;&#x72F1;</code>&#xFF09;</h2>
+<pre class="language-"><code class="lang-js">
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+
+    <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">&apos;aaa&apos;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// &#x81EA;&#x5DF1;&#x5904;&#x7406; 10 &#x884C;&#x4EE3;&#x7801;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> <span class="token string">&apos;&#x7B2C;&#x4E00;&#x5C42;&#x7684; 10 &#x884C;&#x4EE3;&#x7801;&#x5904;&#x7406;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// &#x5BF9;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x7B2C;&#x4E00;&#x6B21;&#x5904;&#x7406;</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token function">resolve</span><span class="token punctuation">(</span>res <span class="token operator">+</span> <span class="token number">1111</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> <span class="token string">&apos;&#x7B2C;&#x4E8C;&#x5C42;&#x7684; 10 &#x884C;&#x5904;&#x7406;&#x4EE3;&#x7801;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token parameter">resolve</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token function">resolve</span><span class="token punctuation">(</span>res <span class="token operator">+</span> <span class="token number">22222</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> <span class="token string">&apos;&#x7B2C;&#x4E09;&#x5C42;&#x7684; 10 &#x884C;&#x5904;&#x7406;&#x4EE3;&#x7801;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre>
+<p>&#x4EE5;&#x4E0A;&#x4EE3;&#x7801;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x7684;&#x65B9;&#x5F0F;&#x7B80;&#x5199;</p>
+<pre class="language-"><code class="lang-js">
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+
+    <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">&apos;aaa&apos;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// &#x81EA;&#x5DF1;&#x5904;&#x7406; 10 &#x884C;&#x4EE3;&#x7801;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> <span class="token string">&apos;&#x7B2C;&#x4E00;&#x5C42;&#x7684; 10 &#x884C;&#x4EE3;&#x7801;&#x5904;&#x7406;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// &#x5BF9;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x7B2C;&#x4E00;&#x6B21;&#x5904;&#x7406;</span>
+        <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>res <span class="token operator">+</span> <span class="token number">1111</span><span class="token punctuation">)</span>
+
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> <span class="token string">&apos;&#x7B2C;&#x4E8C;&#x5C42;&#x7684; 10 &#x884C;&#x5904;&#x7406;&#x4EE3;&#x7801;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>res <span class="token operator">+</span> <span class="token number">222</span><span class="token punctuation">)</span>
+
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> <span class="token string">&apos;&#x7B2C;&#x4E09;&#x5C42;&#x7684; 10 &#x884C;&#x5904;&#x7406;&#x4EE3;&#x7801;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre>
+<p>&#x4EE5;&#x4E0A;&#x4EE3;&#x7801;&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x8FBE;&#x5230;&#x6700;&#x4F73;&#x7B80;&#x5199;&#x65B9;&#x5F0F;</p>
+<pre class="language-"><code class="lang-js">
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+
+    <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">&apos;aaa&apos;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// &#x81EA;&#x5DF1;&#x5904;&#x7406; 10 &#x884C;&#x4EE3;&#x7801;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> <span class="token string">&apos;&#x7B2C;&#x4E00;&#x5C42;&#x7684; 10 &#x884C;&#x4EE3;&#x7801;&#x5904;&#x7406;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// &#x5BF9;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x7B2C;&#x4E00;&#x6B21;&#x5904;&#x7406;</span>
+        <span class="token keyword">return</span> res <span class="token operator">+</span> <span class="token number">1111</span>
+
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> <span class="token string">&apos;&#x7B2C;&#x4E8C;&#x5C42;&#x7684; 10 &#x884C;&#x5904;&#x7406;&#x4EE3;&#x7801;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">return</span> res <span class="token operator">+</span> <span class="token number">222</span>
+
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> <span class="token string">&apos;&#x7B2C;&#x4E09;&#x5C42;&#x7684; 10 &#x884C;&#x5904;&#x7406;&#x4EE3;&#x7801;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre>
+<h2 id="&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x5931;&#x8D25;&#x65F6;&#x5019;&#x7684;&#x5904;&#x7406;"><a name="&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x5931;&#x8D25;&#x65F6;&#x5019;&#x7684;&#x5904;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x5931;&#x8D25;&#x65F6;&#x5019;&#x7684;&#x5904;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x5931;&#x8D25;&#x65F6;&#x5019;&#x7684;&#x5904;&#x7406;</h2>
+<blockquote>
+<p>&#x5728;&#x4EFB;&#x4F55;&#x4E00;&#x6B65;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x5931;&#x8D25;&#xFF0C; catch &#x65B9;&#x6CD5;&#x90FD;&#x53EF;&#x4EE5;&#x5B8C;&#x7F8E;&#x83B7;&#x53D6;&#x5230;&#x9519;&#x8BEF;</p>
+</blockquote>
+<pre class="language-"><code class="lang-js">
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+
+    <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">&apos;aaa&apos;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// &#x81EA;&#x5DF1;&#x5904;&#x7406; 10 &#x884C;&#x4EE3;&#x7801;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> <span class="token string">&apos;&#x7B2C;&#x4E00;&#x5C42;&#x7684; 10 &#x884C;&#x4EE3;&#x7801;&#x5904;&#x7406;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// &#x5BF9;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x7B2C;&#x4E00;&#x6B21;&#x5904;&#x7406;</span>
+        <span class="token comment">// return Promise.reject(&apos;&#x7B2C;&#x4E00;&#x6B21;&#x8BF7;&#x6C42;&#x5931;&#x8D25;&apos;)</span>
+        <span class="token keyword">return</span> res <span class="token operator">+</span> <span class="token number">111</span>
+
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> <span class="token string">&apos;&#x7B2C;&#x4E8C;&#x5C42;&#x7684; 10 &#x884C;&#x5904;&#x7406;&#x4EE3;&#x7801;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// return res + 222</span>
+        <span class="token keyword">throw</span> <span class="token string">&apos;&#x7B2C;&#x4E8C;&#x6B21;&#x8BF7;&#x6C42;&#x5931;&#x8D25;&apos;</span>
+
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> <span class="token string">&apos;&#x7B2C;&#x4E09;&#x5C42;&#x7684; 10 &#x884C;&#x5904;&#x7406;&#x4EE3;&#x7801;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;&#x5F02;&#x5E38;&#x9519;&#x8BEF;&#xFF1A;&apos;</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre>
+<h2 id="&#x5F53;&#x9700;&#x8981;&#x540C;&#x65F6;&#x6267;&#x884C;&#x4E24;&#x4E2A;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;-&#xFF08;&#x5F88;&#x65E9;&#x4E4B;&#x524D;&#x7684;&#x65B9;&#x6848;&#xFF09;"><a name="&#x5F53;&#x9700;&#x8981;&#x540C;&#x65F6;&#x6267;&#x884C;&#x4E24;&#x4E2A;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;-&#xFF08;&#x5F88;&#x65E9;&#x4E4B;&#x524D;&#x7684;&#x65B9;&#x6848;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x5F53;&#x9700;&#x8981;&#x540C;&#x65F6;&#x6267;&#x884C;&#x4E24;&#x4E2A;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;-&#xFF08;&#x5F88;&#x65E9;&#x4E4B;&#x524D;&#x7684;&#x65B9;&#x6848;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F53;&#x9700;&#x8981;&#x540C;&#x65F6;&#x6267;&#x884C;&#x4E24;&#x4E2A;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019; &#xFF08;&#x5F88;&#x65E9;&#x4E4B;&#x524D;&#x7684;&#x65B9;&#x6848;&#xFF09;</h2>
+<pre class="language-"><code class="lang-js">
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+
+    <span class="token keyword">let</span> isResult1 <span class="token operator">=</span> <span class="token boolean">false</span>
+    <span class="token keyword">let</span> isResult2 <span class="token operator">=</span> <span class="token boolean">false</span>
+
+    $<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        url<span class="token operator">:</span> <span class="token string">&apos;&apos;</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">success</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;&#x7ED3;&#x679C;1&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            isResult1 <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            <span class="token function">handleResult</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    $<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        url<span class="token operator">:</span> <span class="token string">&apos;&apos;</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">success</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;&#x7ED3;&#x679C;2&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            isResult2 <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            <span class="token function">handleResult</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">function</span> <span class="token function">handleResult</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span>  <span class="token punctuation">(</span>isResult1 <span class="token operator">&amp;&amp;</span> isResult2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;&#x5F53;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42; 1 &#x548C;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42; 2 &#x90FD;&#x5904;&#x7406;&#x5B8C;&#x6BD5;&#x4E4B;&#x540E;&#x6267;&#x884C;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> 
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre>
+<h2 id="&#x5F53;&#x540C;&#x65F6;&#x6267;&#x884C;&#x4E24;&#x4E2A;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x91C7;&#x7528;-promise-&#x7684;-all-&#x65B9;&#x6CD5;"><a name="&#x5F53;&#x540C;&#x65F6;&#x6267;&#x884C;&#x4E24;&#x4E2A;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x91C7;&#x7528;-promise-&#x7684;-all-&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x5F53;&#x540C;&#x65F6;&#x6267;&#x884C;&#x4E24;&#x4E2A;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x91C7;&#x7528;-promise-&#x7684;-all-&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F53;&#x540C;&#x65F6;&#x6267;&#x884C;&#x4E24;&#x4E2A;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x91C7;&#x7528; Promise &#x7684; all &#x65B9;&#x6CD5;</h2>
+<pre class="language-"><code class="lang-js">
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+
+    Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+
+        <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span>reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            $<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                url<span class="token operator">:</span> <span class="token string">&apos;url1&apos;</span><span class="token punctuation">,</span>
+                <span class="token function-variable function">success</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">resolve</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span>reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            $<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                url<span class="token operator">:</span> <span class="token string">&apos;url2&apos;</span><span class="token punctuation">,</span>
+                <span class="token function-variable function">success</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">resolve</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">results</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        results<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// &#x7B2C;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x7684;&#x7ED3;&#x679C;  </span>
+        results<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// &#x7B2C;&#x4E8C;&#x4E2A;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x7684;&#x7ED3;&#x679C;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre>
+<h2 id="&#x5F53;&#x540C;&#x65F6;&#x6267;&#x884C;&#x4E24;&#x4E2A;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x83B7;&#x5F97;&#x5148;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x5373;&#x53EF;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;-promise-&#x7684;-race-&#x65B9;&#x6CD5;"><a name="&#x5F53;&#x540C;&#x65F6;&#x6267;&#x884C;&#x4E24;&#x4E2A;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x83B7;&#x5F97;&#x5148;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x5373;&#x53EF;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;-promise-&#x7684;-race-&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x5F53;&#x540C;&#x65F6;&#x6267;&#x884C;&#x4E24;&#x4E2A;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x83B7;&#x5F97;&#x5148;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x5373;&#x53EF;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;-promise-&#x7684;-race-&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F53;&#x540C;&#x65F6;&#x6267;&#x884C;&#x4E24;&#x4E2A;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x83B7;&#x5F97;&#x5148;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x5373;&#x53EF;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x7528; Promise &#x7684; race &#x65B9;&#x6CD5;</h2>
+<pre class="language-"><code class="lang-js">
+<span class="token keyword">let</span> p1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">,</span> <span class="token string">&apos;P1&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> p2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> <span class="token number">600</span><span class="token punctuation">,</span> <span class="token string">&apos;P2&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Promise<span class="token punctuation">.</span><span class="token function">race</span><span class="token punctuation">(</span><span class="token punctuation">[</span>p1<span class="token punctuation">,</span> p2<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">result</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#x8FD9;&#x91CC;&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x8FD4;&#x56DE; p1 &#x7684;&#x5904;&#x7406;&#x7ED3;&#x679C;&#xFF0C;&#x4E5F;&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x73B0; p2 &#x7684;&#x5904;&#x7406;&#x7ED3;&#x679C;&#xFF0C;&#x5177;&#x4F53;&#x7684;&#x8981;&#x770B;&#x8C01;&#x5904;&#x7406;&#x7684;&#x5FEB;&#xFF0C;&#x5C31;&#x8FD4;&#x56DE;&#x8C01;&#x7684;&#x5904;&#x7406;&#x7ED3;&#x679C;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<div id="gitalk-container"></div> 
+
+<footer class="footer"><div class="footer__container--normal" alt="
+https://notes.pudongping.comdoc/javascript-notes/promise-useage.html
+">
+<a href="../../gif;base64,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" data-lightbox="55392ad3-9f87-46a6-9757-dc61e1a1b0d3" data-title="undefined"><img src="data:image/gif;base64,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" alt="undefined"></a>
+<div class="footer__description--normal"><p class="paragraph footer__author--normal" style="color: #000 !important;">Alex<sup class="super">&#xAE;</sup></p><p class="paragraph footer__quote--normal" style="color: #000 !important;">Artisan, Backend Developer &amp; overall web enthusiast</p><div class="footer__main--normal"><p class="paragraph footer__main__paragraph--normal copyright" style="color: #666 !important;">Copyright &#xA9; Alex all right reserved</p><p class="paragraph footer__main__paragraph--normal footer__modifyTime--normal" style="color: #666 !important;"><span style="color: #666 !important;">modified at:</span>
+2021-09-27 19:03:19
+</p></div></div></div><div class="box__issues">
+
+</div></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="underscore-useage.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: JavaScript underscore 使用 ">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"JavaScript Promise 使用 ","level":"5.13","depth":1,"previous":{"title":"JavaScript underscore 使用 ","level":"5.12","depth":1,"path":"doc/javascript-notes/underscore-useage.md","ref":"doc/javascript-notes/underscore-useage.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","-lunr","-search","search-pro","-sharing","sharing-plus","fontsettings","livereload","expandable-chapters-small","chapter-fold","splitter","hide-element","back-to-top-button","favicon","insert-logo","pageview-count","code","prism","lightbox","github","github-buttons","donate","anchor-navigation-ex","meta","mygitalk","-change_girls","simple-mind-map","image-captions","todo","edit-link-plus","sitemap-general","rss","icp","theme-comscore","page-copyright"],"styles":{"website":"https://pudongping.github.io/notes/resources/styles/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"shell":"bash"}},"github":{"url":"https://github.com/pudongping"},"livereload":{},"meta":{"name":"","content":"","data":[{"name":"referrer","content":"never"}]},"todo":{},"splitter":{},"change_girls":{"time":10,"urls":["https://pudongping.github.io/medias/banner/0.jpg","https://pudongping.github.io/medias/banner/1.jpg","https://pudongping.github.io/medias/banner/2.jpg","https://pudongping.github.io/medias/banner/3.jpg","https://pudongping.github.io/medias/banner/4.jpg","https://pudongping.github.io/medias/banner/5.jpg","https://pudongping.github.io/medias/banner/6.jpg","https://pudongping.github.io/medias/banner/7.jpg","https://pudongping.github.io/medias/banner/8.jpg","https://pudongping.github.io/medias/banner/9.jpg","https://pudongping.github.io/medias/banner/10.jpg","https://pudongping.github.io/medias/banner/11.jpg","https://pudongping.github.io/medias/banner/12.jpg"]},"search-pro":{},"page-copyright":{"wisdom":"Artisan, Backend Developer & overall web enthusiast","noPowered":true,"copyright":"Copyright &#169; Alex","styles (normal, symmetrical)":"normal","style":"normal","isShowQRCode":true,"timeColor":"#666","utcOffset":"8","format":"YYYY-MM-dd hh:mm:ss","signature":"Alex","baseUri":"https://notes.pudongping.com","copyrightColor":"#666","description":"modified at:"},"edit-link-plus":{"label":"编辑本页","base":{"pudongping.github.io":"https://github.com/pudongping/notes/edit/main","pudongping.gitee.io":"https://gitee.com/pudongping/notes/edit/main"},"defaultBase":"https://github.com/pudongping/notes/edit/main"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"donate":{"title":"\"若有共鸣，留言足矣，若有赞赏，何以复加？\"","button":"赞赏","wechat":"https://pudongping.github.io/notes/resources/images/wechat.png","alipay":"https://pudongping.github.io/notes/resources/images/alipay.png","wechatText":"微信","alipayText":"支付宝"},"sitemap-general":{"prefix":"https://notes.pudongping.com"},"hide-element":{"elements":["a.gitbook-link[href='https://www.gitbook.com']"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"rss":{"categories":["markdown","git","gitee","github","php","python","vue.js","node.js"],"title":"蒲东平的编程笔记","description":"削个椰子皮_给个梨的笔记","author":"Alex","site_url":"https://notes.pudongping.com","feed_url":"https://notes.pudongping.com/rss","managingEditor":"276558492@qq.com (Alex Pu)","webMaster":"276558492@qq.com (Alex Pu)"},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":false,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":{"shortcut":"./resources/images/favicon.ico","bookmark":"./resources/images/favicon.ico","appleTouch":"./resources/images/favicon.png","appleTouchMore":{"120x120":"./resources/images/apple-touch-icon-120x120.png","180x180":"./resources/images/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":true},"theme-comscore":{},"icp":{"link":"https://beian.miit.gov.cn/","style":{},"number":"鄂ICP备18004705号-2"},"back-to-top-button":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"pudongping","repo":"notes","type":"star","count":true,"size":"small"}]},"expandable-chapters-small":{},"mygitalk":{"flipMoveOptions":{},"clientID":"8f9c9e11f169577a768b","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["pudongping"],"createIssueManually":false,"distractionFreeMode":false,"repo":"notes","owner":"pudongping","enableHotKey":true,"clientSecret":"507d601f0b338c9908dfeb7f198b89514345748e","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"qq":true,"all":["douban","facebook","google","hatenaBookmark","instapaper","line","linkedin","messenger","pocket","qq","qzone","stumbleupon","twitter","viber","vk","weibo","whatsapp"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"simple-mind-map":{"type":"markdown","preset":"colorful","linkShape":"diagonal","autoFit":true,"style":{}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"url":"https://pudongping.github.io/notes/resources/images/favicon.png","style":"background: none; max-height: 30px; min-height: 30px"},"image-captions":{"caption":"_PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_ - sugaryesp 的笔记","variable_name":"_pictures"}},"theme":"default","author":"Alex","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"蒲东平的编程笔记","language":"zh-hans","links":{"sidebar":{"My Blog":"https://pudongping.github.io","My Notes":"https://pudongping.github.io/notes","My GitHub":"https://github.com/pudongping","My Gitee":"https://gitee.com/pudongping"}},"gitbook":"3.2.3","description":"live and learn"},"file":{"path":"doc/javascript-notes/promise-useage.md","mtime":"2021-09-27T11:03:19.387Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-27T11:03:29.572Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+        
+    
+        
+        <script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mygitalk/mygitalk.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-simple-mind-map/bundle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link-plus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
