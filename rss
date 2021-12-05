@@ -4,7 +4,7 @@
         <description><![CDATA[削个椰子皮_给个梨的笔记]]></description>
         <link>https://notes.pudongping.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 27 Sep 2021 11:03:35 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 05 Dec 2021 14:23:53 GMT</lastBuildDate>
         <atom:link href="https://notes.pudongping.com/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Alex]]></author>
         <managingEditor><![CDATA[276558492@qq.com (Alex Pu)]]></managingEditor>
@@ -218,6 +218,12 @@ git add -A | 提交所有被删除、被替换、被修改和新增的文件到�
             <description><![CDATA[Promise 是异步编程的一种解决方案。]]></description>
             <link>https://notes.pudongping.comdoc/javascript-notes/promise-useage.html</link>
             <guid isPermaLink="true">https://notes.pudongping.comdoc/javascript-notes/promise-useage.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[JavaScript 编程准则]]></title>
+            <link>https://notes.pudongping.comdoc/javascript-notes/programming-rules.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comdoc/javascript-notes/programming-rules.html</guid>
             <dc:creator><![CDATA[Alex]]></dc:creator>
         </item>
     </channel>
