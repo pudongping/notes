@@ -58,4 +58,5 @@
 - [JavaScript ES6 中箭头函数的使用 ](doc/javascript-notes/use-arrows-function.md)
 - [JavaScript underscore 使用 ](doc/javascript-notes/underscore-useage.md)
 - [JavaScript Promise 使用 ](doc/javascript-notes/promise-useage.md)
+- [JavaScript 编程准则](doc/javascript-notes/programming-rules.md)
 
