@@ -59,4 +59,5 @@
 - [JavaScript underscore 使用 ](doc/javascript-notes/underscore-useage.md)
 - [JavaScript Promise 使用 ](doc/javascript-notes/promise-useage.md)
 - [JavaScript 编程准则](doc/javascript-notes/programming-rules.md)
+- [JavaScript jQuery 处理 AJAX 请求](doc/javascript-notes/jQuery-handle-ajax.md)
 
