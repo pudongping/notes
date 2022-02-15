@@ -4,7 +4,7 @@
         <description><![CDATA[削个椰子皮_给个梨的笔记]]></description>
         <link>https://notes.pudongping.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 05 Dec 2021 14:23:53 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 15 Feb 2022 00:04:23 GMT</lastBuildDate>
         <atom:link href="https://notes.pudongping.com/rss" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Alex]]></author>
         <managingEditor><![CDATA[276558492@qq.com (Alex Pu)]]></managingEditor>
@@ -224,6 +224,13 @@ git add -A | 提交所有被删除、被替换、被修改和新增的文件到�
             <title><![CDATA[JavaScript 编程准则]]></title>
             <link>https://notes.pudongping.comdoc/javascript-notes/programming-rules.html</link>
             <guid isPermaLink="true">https://notes.pudongping.comdoc/javascript-notes/programming-rules.html</guid>
+            <dc:creator><![CDATA[Alex]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[jQuery 处理 AJAX 请求]]></title>
+            <description><![CDATA[jQuery 的 jqXHR 对象类似于一个 Promise 对象。]]></description>
+            <link>https://notes.pudongping.comdoc/javascript-notes/jQuery-handle-ajax.html</link>
+            <guid isPermaLink="true">https://notes.pudongping.comdoc/javascript-notes/jQuery-handle-ajax.html</guid>
             <dc:creator><![CDATA[Alex]]></dc:creator>
         </item>
     </channel>
